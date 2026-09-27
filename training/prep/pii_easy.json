@@ -1,0 +1,500 @@
+{
+  "category": "pii_easy",
+  "samples": [
+    {
+      "text": "Name: Daniel Okafor, Email: daniel.okafor@gmail.com, Phone: 617-555-0182",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Customer email: priya.raman84@outlook.com",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Please call me at 503-555-0147, this is my cell.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "SSN: 412-58-9031",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "My social security number is 530-21-7784.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Contact Lena Hoffmann at lena.hoffmann@web.de for the invoice.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Mailing address: 2291 Birchwood Drive, Madison, WI 53711",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Credit card number: 4539 1488 0343 6467, exp 08/27, CVV 331",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Date of birth: 03/14/1988",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Full name: Marisol Delgado-Reyes",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Home phone: (212) 555-0198",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Her email is kenji.watanabe@icloud.com and her phone is 408-555-0133.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Passport No. X48291736, holder: Ahmed Siddiqui",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Driver's license: D4417-2290-8813, issued to Rachel Kim",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Bank account 0072184456, routing 026009593, owner Tomasz Nowak",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Employee ID 88213 belongs to Grace Mbeki in accounting.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Send the refund to olivia.brandt@protonmail.com.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Patient name: Harold Finch, DOB 11/02/1954, MRN 00482913",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "You can text me at 773-555-0161 anytime.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Shipping to: Nadia Petrova, 18 Harbor View Rd, Portland, ME 04101",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Phone number on the account: +1 720 555 0119",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "My name is Ethan Caldwell and I live at 9 Linden Court, Ann Arbor, MI.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Social Security: 287-65-4309",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Email address: sofia.marchetti@libero.it",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Cardholder: Benjamin Osei, card 5425 2334 3010 9903",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Billing address: 4410 Sunset Blvd Apt 12, Los Angeles, CA 90027",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Reach Wei Zhang at wzhang.design@gmail.com or 646-555-0172.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Applicant: Isabella Rossi, DOB 1992-07-21, SSN 601-44-2378",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Tenant: Marcus Holloway, Unit 5C, 300 River St, Hoboken, NJ 07030",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Please update my phone to 832-555-0156. Thanks, Aisha",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "IBAN: DE44 5001 0517 5407 3249 31, account holder Jonas Weber",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Email me at hugo.lefevre@orange.fr",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Medical record number 7731902 for patient Fatima Al-Sayed",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Home address: 57 Juniper Lane, Asheville, NC 28801",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Contact: Samuel Adeyemi, samuel.adeyemi@yahoo.com",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "The borrower's SSN is 319-80-5527.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Mobile: 415-555-0103",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Name: Chloe Dubois; Phone: 312-555-0137; Email: chloe.dubois@gmail.com",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "My date of birth is June 9, 1979.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Visa 4716 2210 8834 5512 belonging to Anthony Russo",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Please mail the check to Linda Park, 1200 Elm St, Dallas, TX 75201.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Username: mgarcia77, Password: Tr0ub4dor&3",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Personal email: jake.m.thornton@hotmail.com",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Emergency contact: Rosa Jimenez, 305-555-0124",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Taxpayer ID 91-4827715 for Oluwaseun Bello",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Passport number 559218804 issued to Hannah Lindqvist",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Call Dr. Imran Qureshi's cell at 646-555-0190.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Account number: 3345-9921-0087, holder Victoria Chen",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Resident: Paul Mercer, 88 Cedar Hollow Rd, Burlington, VT 05401",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Email for the winner: amelia.hart2001@gmail.com",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Phone: 206.555.0145",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "My SSN is 455-12-9087, please keep it private.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Student name: Diego Fernández, student ID 20231847",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Send the documents to noah.becker@gmx.net by Friday.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Mastercard ending 9903, full number 5425 2334 3010 9903",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Patient: Eleanor Vance, DOB 04/30/1961",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Home: 3310 Willow Creek Ct, Boulder, CO 80301",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Text Kevin at 919-555-0178 when you arrive.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Name: Yusuf Demir, National ID: 34871256490",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "License plate 7KJD294 registered to Sandra Whitfield",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Primary email: t.nakamura@softbank.ne.jp",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "SSN 078-43-1129 was entered on the W-2 for Brian Foley.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Direct line for Megan O'Brien: 617-555-0114",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "The account belongs to Luis Alvarado, email lalvarado@gmail.com.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Recipient: Ingrid Solberg, Storgata 14, 0155 Oslo, Norway",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Phone number: 07700 900431 (Oliver Bennett)",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "My email is zoe.patel@live.com and my number is 480-555-0169.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "DOB: 12/25/1990, Name: Christopher Lang",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Card number 3782 822463 10005 on file for Nathan Brooks",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Contact person: Ayumi Sato, +81 90-1234-5678",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Employee: Derek Olsen, SSN 223-67-8841, salary account 88120045",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Please ship to 1450 Magnolia Ave, Savannah, GA 31401, attn: Clara Boone",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Email: rahul.menon.dev@gmail.com",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Here is my phone number: 267-555-0192",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Social security number for Julia Stein: 540-88-2016",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Home address for Mateo Cruz: 721 Ocean Park Blvd, Santa Monica, CA 90405",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Passport: K2290481, Nationality: Canadian, Name: Liam Tremblay",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "My new email address is ava.lindgren@outlook.com.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Patient phone: 702-555-0131, patient name: George Papadopoulos",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Routing 121000358, account 4471908832 for Elena Vasquez",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Driver license number S530-4127-8890 for Arjun Mehta",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Name: Tanya Kowalski, Address: 99 Brook St, Providence, RI 02903",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Cell: 347-555-0115, Email: jordan.reyes@gmail.com",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Password for the admin account of Carl Jensen is Summer2024!!",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "DOB 08/17/1983 and SSN 612-33-9075 for applicant Mei Lin",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Please contact my wife Laura at laura.bishop@comcast.net.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Phone (650) 555-0187 belongs to Victor Nguyen.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Invoice recipient: Petra Novak, petra.novak@seznam.cz",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "API key for developer Hassan Rahimi: sk_live_4f9a2b7c81d0e6f3a5b9",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Home address: 16 Queen Anne Ave N, Seattle, WA 98109",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Name: Brianna Okoye, Phone: 404-555-0151",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Account holder: Martin Svensson, IBAN SE35 5000 0000 0549 1000 0003",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Email: fernando.silva@uol.com.br, WhatsApp: +55 11 91234-5678",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "The claimant, Deborah Nash, can be reached at 813-555-0126.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Employee badge 44718, name Sean Gallagher, extension 5512",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Social Security No. 389-14-6620",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Mail to: Kofi Mensah, 2207 Lakeview Ave, Chicago, IL 60614",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Email address on file: e.moreau@free.fr",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Card: 6011 0009 9013 9424, name on card: Rebecca Stone",
+      "label": 1,
+      "category": "pii_easy"
+    }
+  ]
+}

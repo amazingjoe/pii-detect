@@ -1,0 +1,650 @@
+{
+  "category": "pii_hard",
+  "samples": [
+    {
+      "text": "you can reach me at marcus [dot] villanueva [at] gmail [dot] com",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "email is j-o-r-d-a-n underscore p-a-l-m-e-r at yahoo",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "my number is five one two, five five five, zero one eight four",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "call me: eight oh one, five five five, oh one three two",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "hmu at kay (dot) fontaine (at) proton (dot) me",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Phone is 6 4 6 5 5 5 0 1 7 9, text first please",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "my social is four two one, sixty seven, eighty nine oh two",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "her handle is at-symbol then deliaroseart, same on every platform",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "the card is forty five thirty two, then eleven eighty eight, zero three four three, sixty four sixty seven",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "drop me a line: s.ivanova AT mail DOT ru",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "digits are 773.555.O126 (that's an O not a zero lol)",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Contact: rnoble at fastmail, the usual dot com",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "{\"user_id\": 88213, \"full_name\": \"Graham Osterberg\", \"email\": \"g.osterberg@icloud.com\"}",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "INSERT INTO patients (name, dob, diagnosis) VALUES ('Mirela Ionescu', '1974-05-02', 'bipolar II');",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "2024-03-11T14:22:07Z INFO auth: login success user=tpham@clinicnet.org ip=203.0.113.77",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "first_name,last_name,ssn\nKeith,Arnaud,344-09-8812",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "export STRIPE_SECRET_KEY=sk_live_51HqT9dKj2mXa0bW8vN3pQ",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "curl -u admin_rlopez:Qx7!mv2Lp https://internal.example.net/api/records",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "customer = Customer(name='Delphine Moreau', phone='+33 6 12 34 56 78')",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "WARN payment failed card=4916338506082832 exp=0926 holder=HOLLAND/BRIDGET",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "<contact><name>Ifeoma Chukwu</name><tel>+234 803 555 0142</tel></contact>",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "| 1042 | Anneliese Graf | 1983-11-09 | anneliese.graf@t-online.de |",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "DEBUG session token for user priya_s: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcml5YV9zIn0.kR9x",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "git log --author='Callum Reid <callum.reid.dev@gmail.com>'",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "ERROR 500 while processing refund for acct 0082-4471-993 (C. Mbeki)",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "patient_notes: 'Pt. Hollis Grey, 67M, hx of MI, lives alone at 14 Fern Rd'",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "ssh deploy@10.4.12.9 -i ~/.ssh/id_rsa  # key belongs to Oskar Lind",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "mysql://jmorrow:Winter!2023@db.prod.local:3306/hr",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Mi nombre es Valeria Quintero y mi teléfono es 55 1234 5678.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Je m'appelle Étienne Laurent, j'habite au 12 rue des Lilas, 69003 Lyon.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Meine E-Mail-Adresse ist katrin.vogel@gmx.de, bitte ruf mich nicht an.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "O CPF do cliente Rodrigo Almeida é 123.456.789-09.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Il paziente Giovanni Ferri, nato il 4 aprile 1950, ha il diabete di tipo 2.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Mijn BSN is 123456782 en ik woon in Utrecht, Oudegracht 88.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Pani Agnieszka Wróbel, PESEL 85031412345, prosi o kontakt.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "El paciente Joaquín Herrera fue diagnosticado con VIH en 2019.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "山田太郎の電話番号は090-1234-5678です。",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Numéro de sécurité sociale de Mme Claire Fabre : 2 84 05 75 112 042 17.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Ich bin Jonas Richter, geboren am 17.08.1991 in Leipzig.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Envíale el contrato a Paula Serrano a su correo paula.serrano@hotmail.es",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "The only left-handed pitcher on the 2019 Westfield High varsity team now works at the Elm St pharmacy and has epilepsy.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Our client is the 58-year-old female mayor of Harlow Springs, population 900, and she's seeking treatment for addiction.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "The new CFO of Brightline Robotics, who started in January, is quietly getting a divorce.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "My neighbor, the retired firefighter in the blue house on the corner of Oak and 3rd in Millbrook, has dementia.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "The only pediatric oncologist at Cedar Falls General was just arrested for DUI.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "The tallest girl in Mrs. Ferreira's 4th grade class at Pinecrest Elementary has been missing school for chemo.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "The owner of the one bakery in Ridgeway, Montana, the one with the red awning, filed for bankruptcy.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Last year's valedictorian from Hollow Creek Academy, the one who went to MIT, dropped out after a psychiatric hold.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "For verification: last four of SSN 8841, born 06/1979, zip 60614.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Account ending 3390, mother's maiden name Kowalczyk, DOB 2/2/85.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Security answers: first pet Biscuit, first school Linwood Elementary, born in Tacoma. User: bwhitlock.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Initials R.T.D., DOB 1966-10-30, zip 30307, diagnosis: stage III melanoma.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "lol my addy is 42 wallaby way syd, come thru after 9",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "omg joel mcnally just got fired for stealing from the till at the westgate store",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "its me ashley, pls call 303 555 0110 asap my car broke down",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "yo my venmo is @dre-okafor-4 send me the 20",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "hey its rebekah w, my new email is rebekah.w.writes@gmail.com lmk if u get this",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "gonna be at my moms 118 cherry ln til sunday if u need me",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "brb, grandmas in the hospital with pneumonia again, room 5 at st lukes, her name's edna fowler",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "wat was ur ssn again for the tax thing, i have 552-31-... and then?? oh right 7719",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "The quarterly offsite went well overall. We covered roadmap priorities, the hiring plan for Q3, and the new expense policy. Catering was excellent and the venue had great views of the harbor. One logistics note: the shuttle driver, Pedro Alvarez, left his personal phone number, 415-555-0163, in case anyone needs a ride back tomorrow. Please remember to submit feedback forms by Friday.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Photosynthesis converts light energy into chemical energy, primarily in the chloroplasts of plant cells. The light-dependent reactions occur in the thylakoid membranes, while the Calvin cycle takes place in the stroma. Note for the TA: grade adjustments for Lucas Ferreira (student ID 20194418) should be sent to me directly. The final exam will cover chapters seven through twelve.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Our apartment complex has a lovely courtyard garden with tomatoes, basil and marigolds, and residents take turns watering on weekends. The compost bins are behind the bike shed. If you have any questions about the schedule, the garden coordinator is Hilde Maartens in unit 7, and she prefers texts at 646-555-0183. Please rinse your tools after use.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "The API supports pagination via cursor tokens and returns up to 100 items per page. Rate limits are 600 requests per minute per key. For the demo on Thursday we'll be using Sam Keating's personal production key, sk_live_9fa01c77b3e4d2a8, so please don't paste it anywhere. Errors are returned in RFC 7807 format.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Hiking the ridge trail takes about four hours round trip, with a steady elevation gain of 2,300 feet. Bring plenty of water, as there are no reliable streams after mile two. We parked at the north trailhead and left a note on the dash with my name, Callie Brandt, and my cell, 541-555-0120, in case a ranger needed to reach us. The views at the summit were worth every step.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "The board discussed the capital campaign, the library renovation timeline and the updated volunteer handbook. Under confidential matters, the committee noted that longtime volunteer Mabel Huxley has been diagnosed with early-stage Parkinson's and will step back from her Tuesday shifts. The meeting adjourned at 8:40 p.m.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Thanks for the great workshop on sourdough! The key takeaways were hydration ratio, bulk fermentation timing and oven spring. I'm attaching the recipe sheet. Also, for the carpool next week, I'll pick up Rita from her place at 23 Sycamore Ct around 7:15. Happy baking everyone!",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "The migration to the new data warehouse is on track. All fact tables have been backfilled and the dashboards have been repointed. One blocker: the service account password for the legacy export, owned by Deepak Varma, is still hardcoded as Kx92!pqL in the cron job and needs to be rotated before cutover.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "The victim was the wife of the Harmon County sheriff, Doug Pruitt.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Emily's father, who runs the only hardware store in Tillman, is facing fraud charges.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Tell them the son of our Oak Street landlord, Mr. Abernathy, is the one who crashed the car.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Priscilla's twin sister Pamela Voss gave birth yesterday at Mercy West, room 409.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Kenji mentioned he's been seeing someone about his panic attacks since the layoff.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Between us, Harriet's second DUI is why she takes the bus now.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "I saw Dimitri Volkov at the AA meeting on Clement Street last night.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Anita's been on disability since the accident; the claim number is 88-04172.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Wren quietly transitioned last year and prefers we don't mention her old name, Warren Hollister.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Luca Moretti is in the country on an expired visa and works cash-only at the car wash.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "wifi at my place: network OkaforHome5G, pw is Chidi&Nkem2019",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "pin for the shared debit card (Marisa's account) is one nine nine four",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "The recovery phrase for my wallet is: orbit canyon velvet ladder quiet mango sponge fossil habit random arctic lens",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "AWS_ACCESS_KEY_ID=AKIA4QX7ZT2LM9RB3KWD belongs to Jeremy Lutz's personal account",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "door code for 18B is 5-5-2-1, it's Mrs. Castellanos's unit, let the plumber in",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Happy 40th, Genevieve Aubert! Born March 3rd 1985 at St. Joseph's, still the best person I know.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "The minor, Liam Ostrowski, age 13, of 9 Brookside Dr, was released to his grandmother.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Our newest resident, Mr. Albert Kline, turned 94 on Sunday and is in memory care wing C.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Tried calling 971 555 0105 three times, straight to voicemail, it's Gianni's cell.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "1 Infinite Loop? no, send it to my place, 612 Sparrow Hill Rd, Fairview, TN 37062",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Reference: A-2294017, that's Mariah Tolbert's immigration case number.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Receipt for Ahmad Karimi, Amex ...1009, amount $1,248.00, room 811.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "The tip line got a call from 202-555-0181 naming Jared Whitcomb as the driver.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Case 24-CV-0913: Plaintiff Svetlana Morozova alleges her employer disclosed her pregnancy.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "My student loan servicer keeps sending mail for Dana Whitlow to this address, 77 Orchard St, Unit 3.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Can you pull the chart for DOB 07-22-1963, last name Fairbanks? He's here for his dialysis.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "IP 198.51.100.23 has been traced to the home router of Nils Andersson in Malmö.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Flight AA1920, seat 14C, passenger BERGSTROM/TOBIAS, frequent flyer 88213JK",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "bank sent a code to ***-***-0147 but that's Liv's old phone, she's at 425-555-0199 now",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Tag me in the photos, I'm @the.real.kavya.m on insta",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "The subject vehicle, a black F-150, plate TXR 4491, is registered to Bryce Holloway.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Paramedics treated Ms. Joan Whitaker, 71, for a hip fracture at her home on Laurel Ave.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "My social security number is 219-44-6031, please don't write it down.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "The patient's SSN is 404-12-7788 and it needs to be on the claim form.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Call my cell at 818-222-4190 if the delivery is late.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Her home phone is 612-555-0137, but she rarely answers it.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "My checking account number is 4400-2193-7765 at First Harbor Bank.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "The borrower's taxpayer ID is 48-3107725.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "My date of birth is 03/14/1988, if the pharmacy asks.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Patient born 11/02/1954, name Ruthanne Obermeyer, allergic to latex.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "The applicant, DOB 2025-01-31, is too young for the program, per the form her mother submitted.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "My personal passport number is 902551180, and it expires next year.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "The medical record number for Emeka Adeyemi-Clarke is 2024-417-0093.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Driver license 7731-2290-4418, issued to Noor Haddad, was suspended.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Session token for user lmarsh: 9f86d081884c7d659a2feaa0c55ad015",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Quentin's GitHub personal access token is ghp_4f9Kq27LmZx81Rt0cVb3Nw5Yp6Ha2Jd7",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "The password reset code sent to Adaeze's phone was 481920.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Recovery key for Tobias Engel's laptop: 3F9A-77C1-B204-E6D8-1A5C",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "My neighbor Serafina Oyelowo announced she's leaving her husband.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "My cousin Dario Pellegrini got arrested outside the stadium last night.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Our accountant, Hollis Varga, is being treated for leukemia.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "My classmate Ingeborg Nyhus failed her bar exam for the second time.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Tell Anneke Visser her biopsy results are in; her number is 206-555-0152.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Iris Kaplan in unit 3C has been late on rent for four months.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Hope Delaney's new cell number is 480-555-0166.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Grace Okafor was admitted to St. Mary's with pneumonia.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Mark Hollister's salary is being cut by twenty percent.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Bill Arceneaux, 72, lives alone at 19 Pecan Street and has dementia.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Media can reach me directly, Sunniva Aas, at sunniva.aas@gmail.com.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Ship my return to my home, 88 Larkspur Court, Reno, NV 89509.",
+      "label": 1,
+      "category": "pii_hard"
+    },
+    {
+      "text": "Text me at 702-555-0118, I'm the one who booked room 214.",
+      "label": 1,
+      "category": "pii_hard"
+    }
+  ]
+}

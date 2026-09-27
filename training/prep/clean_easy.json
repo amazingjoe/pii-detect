@@ -1,0 +1,505 @@
+{
+  "category": "clean_easy",
+  "samples": [
+    {
+      "text": "Preheat the oven to 375 degrees and grease a nine-inch pan.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The meeting has been moved to the large conference room.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Can someone restock the printer paper on the third floor?",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Honestly the second season was better than the first.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Our flight got delayed by two hours because of fog.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Mix the flour, sugar and baking soda before adding the eggs.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The garden looks amazing after all that rain last week.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "I think we should repaint the living room a lighter color.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Traffic was light this morning so I got in early.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The new coffee machine in the kitchen makes great espresso.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Let's push the release to next sprint so QA has more time.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Remember to bring a jacket, it gets cold after sunset.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The museum is free on the first Sunday of every month.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Whales communicate using complex songs that can travel for miles.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Our team won the trivia night by a single point.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "I finally finished that thousand-piece puzzle.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The build is failing on the lint step, not the tests.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Add a pinch of salt to bring out the sweetness.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Mount Everest is the highest mountain above sea level.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Do we have any more of those blue folders?",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The sunset over the lake was absolutely stunning tonight.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "I'm going to start running three times a week.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The library extended its weekend hours for exam season.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Please make sure all laptops are updated before Friday.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The recipe calls for two cups of chopped spinach.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "It's supposed to snow six inches overnight.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Bananas ripen faster when stored next to apples.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "We need to refactor the payment module before adding new features.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The concert was loud but the band was fantastic.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "My plants keep dying no matter how much I water them.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The river flooded the lower trail, so take the upper loop.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Quarterly revenue grew twelve percent year over year.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Could you turn the music down a little?",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The kids spent all afternoon building a sandcastle.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Honeybees perform a waggle dance to share the location of flowers.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "I prefer tea over coffee in the afternoon.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The store closes early on public holidays.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "We adopted a rescue cat and she's already running the house.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The Great Wall of China stretches thousands of kilometers.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Our sprint retro highlighted better communication as a goal.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "That movie had the best soundtrack I've heard in years.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The printer on floor two is jammed again.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Always let the pasta water come to a full boil first.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Lightning is about five times hotter than the surface of the sun.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Let's order pizza for the team lunch on Friday.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "I spilled coffee all over my keyboard this morning.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The farmer's market has the best peaches in August.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The deployment went smoothly with zero downtime.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Knitting is surprisingly relaxing once you get the hang of it.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Please wipe down the tables after using the break room.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The ferry runs every forty-five minutes on weekdays.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Octopuses have three hearts and blue blood.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "We should plan a picnic before the weather turns.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The dashboard now loads twice as fast after the caching change.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "I can't believe how quickly this year has gone by.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Stir the risotto constantly so it doesn't stick.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The hotel breakfast buffet had amazing pastries.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Saturn's rings are made mostly of ice and rock.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Our neighborhood is having a block party next month.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The heating in the office is way too high today.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Dogs can understand around a hundred and sixty words on average.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "I'm trying to read more books this year instead of scrolling.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Marinate the chicken for at least four hours.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The team agreed to switch to two-week sprints.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The wind knocked over our patio umbrella again.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Cacti store water in their thick stems.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Please silence your phones during the presentation.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The bakery on the corner sells out of croissants by nine.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Our unit tests now cover over eighty percent of the codebase.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Tomorrow's forecast calls for sunshine and mild temperatures.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The hiking boots I bought are finally broken in.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Venus rotates in the opposite direction to most planets.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Can we reschedule the call to after lunch?",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The soup needs more garlic and a squeeze of lemon.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The playground was packed with kids after school.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Upgrading the database driver fixed the connection timeouts.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Coral reefs support about a quarter of all marine species.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "My new headphones have excellent noise cancelling.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The team offsite will include a cooking class.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The train was quiet enough to get some reading done.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Let the bread cool completely before slicing it.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The city is adding new bike lanes downtown.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Most of the bugs this week came from the date parsing code.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Autumn leaves change color as chlorophyll breaks down.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "I think the couch would look better against the other wall.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Water the tomatoes deeply but less often.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The quarterly all-hands will be streamed for remote staff.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Our old car finally hit two hundred thousand miles.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Penguins huddle together to stay warm during storms.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The documentation should explain how to configure retries.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "We ran out of milk, can you grab some on the way home?",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The fireworks display lasted almost half an hour.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Remote work has changed how the office uses meeting rooms.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Slice the onions thinly and cook them low and slow.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The kids' soccer game got rained out.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Sound travels faster in water than in air.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The new onboarding checklist cut setup time in half.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "I love the smell of fresh cut grass in spring.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The bus route was changed because of construction.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Chess teaches patience and planning ahead.",
+      "label": 0,
+      "category": "clean_easy"
+    }
+  ]
+}

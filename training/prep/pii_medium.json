@@ -1,0 +1,600 @@
+{
+  "category": "pii_medium",
+  "samples": [
+    {
+      "text": "Just a heads up, Jenna Morales from the second floor was diagnosed with type 1 diabetes last month.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Can you let Theo know his lab results came back positive for strep? His number's 510 555 0138.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "We're terminating Craig Donnelly effective Monday due to repeated attendance violations.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "I finally got my new place! It's 38 Alder Street, apartment 2, in Somerville if you want to visit.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Mrs. Kaur in bed 12 is allergic to penicillin, please flag her chart.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Hi Mom, the landlord wants my old address for the reference, it was 1127 Grand Ave, St. Paul.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Reggie Tan filed for divorce last week and is asking the firm about custody options.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Ping me on 0412 555 783 if the courier gets lost, I'm at home all day. - Mia",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The background check on Colin Hargreaves turned up a 2016 DUI conviction.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Nora was born on the 3rd of February 1996, so she qualifies for the youth fare.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Our intern Beatriz Souza is on a student visa that expires in May.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Wire the deposit to my Chase checking, account ending 4471, routing 021000021. Thanks! - Omar",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Please remove Victor Ramos from the mailing list, he passed away in March.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "I think Hollis from payroll is being treated for depression, he's been out a lot.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Can you send the NDA to felix at felixgrant.studio, that's his personal site email.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Lucia's new mobile is +34 612 345 678, she changed it after the move to Valencia.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The server logs show user 198.51.100.42 logged into Amanda Price's account from Lagos.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Dear Mr. Achebe, your claim number 4481-22 regarding the injury to your left knee has been approved.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Kiara Singh tested positive for HIV at her last screening and has started treatment.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Grandpa's Medicare number is 1EG4-TE5-MK73, I need it for the pharmacy.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Remember, Dominic's locker combo is 14-32-07 and his bike is the red one out front.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The police report lists the suspect as Terrence Wolfe, 34, of Riverside.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Hannah Cho, who lives two doors down from us on Maple, just had twins.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Please don't tell anyone, but Adrian Lopez is undocumented and worried about the audit.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Rent is late again for unit 4B, that's the Nakamura family, their lease number is L-20931.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "My daughter Ella Brighton goes to Lincoln Elementary, room 14, and gets picked up at 3.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Sorry, typo earlier, my number's actually 3125550176.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Tell the auditors that Raymond Cho's expense report included $4,200 of personal travel.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The job offer to Simone Achterberg is $142,000 plus a 10% signing bonus.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Jasper failed his drug test at the warehouse this morning, HR is handling it.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Imani's therapist is Dr. Ruth Feld and her appointments are on Wednesdays at 5.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Our VIP guest tonight is Sebastián Ortega, he's in room 1207 under the name S. Ortega.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Forward his CV to me, Thabo Nkosi, at thabo dot nkosi at gmail dot com.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Ms. Lindqvist's son was suspended from school for fighting.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The VIN on my car is 1HGCM82633A004352 and it's registered in my name, Paula Greer.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Did you hear Martina Russo is pregnant? She hasn't told her boss yet.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Mr. Delacroix's credit score dropped to 540 after the bankruptcy.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Put the package with the neighbor at 212 Oakmont, that's the Feldmans, they'll hold it.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Ricardo mentioned his PIN is 7729, which is honestly not very secure.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Welcome aboard, Priyanka! Your employee number is E-40917 and your desk is 3F-22.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The arrested individual, Leon Maddox, was booked at the county jail at 2:14 a.m.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "I can't make it Thursday, my chemo session got moved. - Deb Harlan",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Can you add Farah Haddad to the insurance plan? Her birthday is 9/12/1987.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Aunt Gloria's new address is 5 Seaview Terrace, Kinsale, County Cork.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Trevor from the gym owes me $300 and his Venmo is @trevor-bassett-22.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Marco Bellini was flagged by the fraud team for three chargebacks this month.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The adoption paperwork for baby Maya lists her birth mother as Keisha Lowe.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "She uses the handle @quietfern_88 on everything, you'll find her profile easily.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "My landline is 01632 960 471 if the mobile doesn't work.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Lars Eriksen's blood type is O negative, make sure the surgical team knows.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Grab the spare key from under the mat at 44 Holly Rd, the Petersons are away till Sunday.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Coach said Tyrese Jackson has a concussion and is out for the season.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Dr. Obi, the patient in 3B is Winifred Saunders and she's refusing her insulin.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Josh's Social is 219 44 0873, I need it for the dependents section.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Evelyn Park moved out of the shelter and now lives with her sister in Fresno.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Reminder: Stanislav Petrenko's parole hearing is on the 18th.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "I'm filling out the form for my son, Arlo Whitman, date of birth April 2, 2017.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "HR confirmed that Tamsin Blake requested FMLA leave for her mother's dementia care.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Can someone cover for Ines Duarte? She's in the ER with a broken wrist.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Paulo's WhatsApp is plus 351 912 345 678, he prefers that to email.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Our tenant Brigitte Olsen has been reported to the collections agency for unpaid rent.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The deposition of witness Harriet Mbatha is set for 9 a.m. in Courtroom 4.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "My kid's pediatrician says Noah Kessler is behind on his vaccinations.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Please verify, is this the right card, one ending in 0417 under Yvonne Carter?",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Rohan Iyer's green card interview is at the Newark field office next week.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Selma from accounting told me her salary is only $58k after six years.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The login email for my Netflix is kat.brennan.92@gmail.com, don't share it.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Our nanny, Esperanza Molina, has a key and the alarm code is 4419.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Tim Kowalczyk was admitted to rehab for alcohol dependence on Tuesday.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "I ran into Beatrice Holm at the clinic, she's getting tested for BRCA.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Hey it's Anika, new number, save it: 628 555 0149.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Frederick Osei applied for food assistance and qualifies at the highest tier.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Talia Rosen's mother is her emergency contact, reachable at 954-555-0197.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Send the lab report to the patient portal account for Gunnar Halvorsen, user ghalvorsen1.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Olumide Adebayo has three prior evictions according to the tenant screening.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The recording shows Kristen Ahlberg entering the building at 11:52 p.m. with an unknown man.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "My husband Rafael's truck plate is 8BHW417, can you add it to the parking list?",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Wendell's DNA test says he has a half-brother in Tulsa he never knew about.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Zainab Hussein will need a wheelchair accessible room because of her MS.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Tax return for Lionel and Carmen Fitch shows adjusted gross income of $212,480.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "I'm in room 318 at the Marriott under Duval, come by after 8.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Kowalski's probation officer called asking where he's been living.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Please send the loan statement for Aria Novak to her work address, 1 Market Plaza, suite 900.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The phone that pinged near the scene is registered to Declan Burke.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Can you believe Renata Silva's credit card got maxed out by her ex?",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Pharmacy note: refill oxycodone 10mg for Mr. Harlan Pryce, date of birth 1/19/1958.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Andre is on the sex offender registry, the neighborhood group just found out.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Our member Joaquin Barrera's gym access card number is 000418273.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Just got my results, I'm BRCA2 positive. Please keep this between us. - Olivia Tran",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The survivor, 16-year-old Kayla Morrison, was taken to St. Vincent's.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "My ex Brandon Leigh still has my spare key and lives at 90 Pine Hill Rd.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Whoever parked the silver Civic, plate BT-4401, in my spot, it's Mateus from 5A, right?",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Ms. Adeola Okonkwo's asylum application is pending review.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Loan officer notes: Gerald Hsu earns $96k and has $41k in student debt.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Tell Rina her Uber driver was Mehmet Yilmaz in a gray Prius.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "I'll be staying at my brother's place, 12 Kestrel Way, Leeds, until the repairs are done.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The patient, Mr. Ulrich Brandt, admitted to using cocaine the night before.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Sienna Walsh's bank flagged an $8,000 withdrawal from her savings as suspicious.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Josephine Arden voted by absentee ballot and registered as independent.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The committee chair, Ottilie Brandvold, can be reached at 612-555-0148 about the agenda.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Questions about parking permits go to the building manager, Desmond Achterberg, at d.achterberg@gmail.com.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Our treasurer Priyamvada Kulkarni asked that reimbursements be sent to her personal Venmo, @pkulkarni-88.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The team lead, Rafferty Nwosu, is on medical leave after his heart surgery.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Our volunteer coordinator Soledad Ybarra lives at 41 Tamarack Lane if you need to drop off supplies.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The on-call engineer tonight is Kasimir Lund, cell 917-555-0126.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The head coach, Brennan Oduya, was suspended pending the harassment investigation.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The property manager, Ilse Vandermeer, asked tenants to text her at 503-555-0171 with repair requests.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The club secretary is Wilhelmina Castaneda, and her home number is 404-555-0183.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The hiring manager, Joaquim Ferraz, told me my offer is $118,000.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Shift supervisor Mireille Duchamp's employee ID is 55120 in case payroll asks.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The school principal, Dr. Anselm Whitcombe, is going through a divorce, according to the staff.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The board president, Gwendolyn Ashby, was born on 2/9/1961 and is up for reelection.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The garden coordinator this year is Lorcan Fitzgerald, email lorcan.fitz@outlook.com.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The site foreman, Bogdan Krasinski, was taken to the hospital after falling from the scaffold.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The office manager, Temperance Oyelaran, keeps the spare keys at her house on 8 Rowan Close.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Our union rep Anneliese Kowalczyk's direct line is 312-555-0195.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The dispatcher on duty, Maximilian Serrano, filed a complaint against his supervisor.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The department head, Hyacinth Obuya, is taking FMLA leave to care for her father.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Tour guide Casimir Delacroix-Mbeki can be reached on WhatsApp at +33 6 45 12 78 90.",
+      "label": 1,
+      "category": "pii_medium"
+    }
+  ]
+}

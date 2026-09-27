@@ -1,0 +1,1530 @@
+{
+  "category": "false_positives",
+  "samples": [
+    {
+      "text": "Abraham Lincoln delivered the Gettysburg Address in November 1863.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Marie Curie won Nobel Prizes in both physics and chemistry.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Serena Williams won twenty-three Grand Slam singles titles.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Albert Einstein published the theory of special relativity in 1905.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Taylor Swift announced the final leg of her stadium tour.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Neil Armstrong was the first person to walk on the Moon.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The Prime Minister addressed parliament about the new budget.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Ada Lovelace is often described as the first computer programmer.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Shakespeare wrote Hamlet around the year 1600.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Nelson Mandela became President of South Africa in 1994.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Frida Kahlo painted many self-portraits during her career.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Isaac Newton formulated the laws of motion and universal gravitation.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Martin Luther King Jr. gave the I Have a Dream speech in Washington.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Beethoven continued composing even after losing his hearing.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Leonardo da Vinci painted the Mona Lisa in the early sixteenth century.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Amelia Earhart was the first woman to fly solo across the Atlantic.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Charles Darwin published On the Origin of Species in 1859.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Rosa Parks refused to give up her seat on a Montgomery bus in 1955.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Galileo improved the telescope and observed the moons of Jupiter.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Jane Austen published Pride and Prejudice in 1813.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Lionel Messi scored twice in last night's match.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The Secretary-General called for a ceasefire at the UN assembly.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Steve Jobs introduced the first iPhone at Macworld in 2007.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Mahatma Gandhi led the Salt March in 1930.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Winston Churchill served as Prime Minister during most of the Second World War.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "In the novel, Elizabeth Bennet initially dislikes Mr. Darcy.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Sherlock Holmes solves the case using a single muddy boot print.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Harry Potter discovers he is a wizard on his eleventh birthday.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Atticus Finch defends Tom Robinson in To Kill a Mockingbird.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Captain Ahab is obsessed with hunting the white whale.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Jay Gatsby throws lavish parties hoping to attract Daisy.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Frodo carries the ring to Mount Doom with Sam at his side.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "In the play, Romeo and Juliet come from feuding families.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Hermione is usually the one who figures out the puzzle first.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Don Quixote mistakes windmills for giants.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "For billing questions, email support@northwindtraders.com.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Call our customer service line at 1-800-555-0100, available 24/7.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Our headquarters are located at 500 Corporate Park Drive, Suite 200.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Send press inquiries to media@brightlineenergy.com.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The city help desk can be reached by dialing 311.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "In an emergency, call 911 immediately.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Contact the IT service desk at helpdesk@company.internal for password resets.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Visit our store at the Westfield Mall, level two, near the food court.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Our sales team can be reached at sales@acmewidgets.com or on the main line.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The university admissions office is open Monday through Friday, 9 to 5.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Report bugs to the issue tracker or email bugs@opensourceproject.org.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The poison control hotline is available around the clock.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Returns can be shipped to our warehouse, 4000 Industrial Way, Building C.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "For careers, email jobs@greenleaf.co with your portfolio.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Customers can reach the front desk by dialing zero from any room phone.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Name: [REDACTED], SSN: [REDACTED], DOB: [REDACTED]",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Please enter your SSN in the format XXX-XX-XXXX.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Email: <email>, Phone: <phone_number>",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The patient, [NAME], was admitted on [DATE] with [CONDITION].",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Card number: **** **** **** ****",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Hello {first_name}, your order has shipped!",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Replace YOUR_API_KEY with the key from your dashboard.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Address line 1: __________________  City: ___________",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Dear Customer, your account has been updated.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Enter a valid email address, for example name@domain.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Phone numbers must be ten digits with no spaces or dashes.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "User ID: ####  Password: ********",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Hi <<RECIPIENT>>, thanks for signing up for our newsletter.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Personal details have been removed from this transcript for privacy.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Account holder: N/A. Contact on file: none.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "ISBN 978-0-306-40615-7 is printed on the back cover.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Order #48213-B has been shipped and should arrive Thursday.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Please upgrade to version 3.12.4 to get the security fix.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Error code 0x80070005 means access was denied.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The part number for the replacement filter is HF-2201-XL.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The meeting is scheduled for 2024-10-15 at 14:30 UTC.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The Eiffel Tower is located at 48.8584 N, 2.2945 E.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Flight UA 857 departs from gate 42 at 11:05.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The invoice total is $12,480.55, due in thirty days.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "SKU 00482-7731-19 is out of stock at all locations.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Pi is approximately 3.14159265358979.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The Dow closed up 212 points at 38,471.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "HTTP status 404 means the resource was not found.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Room 402 is reserved for the budget workshop.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Use a 10-32 machine screw for the mounting bracket.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The building was completed in 1931 and has 102 floors.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The speed of light is about 299,792 kilometers per second.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Commit a3f9c21 introduced the regression in the parser.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Tracking the 7:45 express, platform 9, arriving at 8:20.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Set the thermostat to 68 degrees overnight.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The recipe yields 24 cookies at 180 calories each.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Highway 101 is closed between exits 412 and 418.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Our Wi-Fi network supports 802.11ax on the 5 GHz band.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The UUID for the default tenant is 3f2504e0-4f89-11d3-9a0c-0305e82c3301.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The ZIP code 10001 covers part of Midtown Manhattan.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The sample contained 4.7 milligrams per liter of nitrate.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Model year 2019, 2.0 liter engine, 6-speed automatic.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The ticket number for the outage is INC0048213.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Latitude and longitude of the summit are 27.9881 N, 86.9250 E.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Load balancer health checks run every 30 seconds on port 8080.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The docs server listens on 127.0.0.1:8000 by default.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Checksum: sha256 9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The regulation is codified at 45 CFR 164.514.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Invoice INV-2024-0913 was approved by finance.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Batch 7731 of the vaccine was shipped to regional distributors.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Never share your social security number over the phone.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Phishing emails often ask you to confirm your password or bank details.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Under GDPR, users can request deletion of their personal data.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "HIPAA restricts how hospitals share patient medical records.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Our policy is to mask credit card numbers in all logs.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Identity thieves often target dates of birth and mother's maiden names.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Before uploading, strip names, addresses and phone numbers from the dataset.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The training covers how to recognize and report data breaches.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Two-factor authentication makes stolen passwords far less useful.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Employees must not store customer emails in personal spreadsheets.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "A strong password should be at least twelve characters long.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Data minimization means collecting only the personal information you need.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Shred any documents containing account numbers before recycling them.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Anonymized data should not allow any individual to be re-identified.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Security questions are weak because the answers are often public.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The audit found that some tables stored social security numbers unencrypted.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Doctors must obtain consent before sharing a patient's diagnosis.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Credit card numbers follow the Luhn checksum algorithm.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "US phone numbers have a three-digit area code followed by seven digits.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Passports typically expire after ten years for adults.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "CREATE TABLE users (id SERIAL, email TEXT, phone TEXT, dob DATE);",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "first_name,last_name,email,phone",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "def validate_email(address: str) -> bool:",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The ssn column is encrypted at rest using AES-256.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "user.email = form.cleaned_data['email']",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "{\"name\": \"\", \"email\": \"\", \"phone\": \"\"}",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Add a regex that matches US phone numbers in the input field.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "SELECT COUNT(*) FROM customers WHERE country = 'CA';",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The address_line_2 field is optional in the checkout form.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "if not user.date_of_birth: raise ValidationError('DOB required')",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Mask everything except the last four digits of the card field.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The logger redacts any value whose key contains 'password'.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "patient_id is a foreign key referencing the encounters table.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "export LOG_LEVEL=debug",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "curl -X GET https://api.example.com/v2/status",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "INFO request completed in 42ms status=200 path=/health",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "WARN retrying connection to db-replica-2 (attempt 3 of 5)",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "for i in range(10): print(i * i)",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "npm install --save-dev eslint prettier",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "git checkout -b feature/new-onboarding-flow",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The patient in the waiting room asked for a glass of water.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "A customer in Ohio reported that the app crashes on login.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The nurse on the night shift checked vitals every two hours.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Our landlord says the heating will be fixed next week.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "One of the students asked a great question about photosynthesis.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The driver waved as the bus pulled away.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Several employees said they prefer hybrid schedules.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The defendant pleaded not guilty at the arraignment.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "A neighbor said the fireworks went on past midnight.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The new hire starts on Monday and will join the design team.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "My doctor recommended more sleep and less caffeine.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The CEO will present the annual results next Tuesday.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The teacher assigned two chapters for homework.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "A tourist asked us for directions to the cathedral.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The pharmacist explained how to take the antibiotic.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Most respondents in the survey were between 25 and 34.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The average patient waits about twenty minutes to be seen.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Our mail carrier always comes around noon.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Some users reported that the password reset email was slow.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The judge adjourned the hearing until next month.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Jordan is a country in the Middle East with ancient ruins at Petra.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The Amazon is the largest rainforest on Earth.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Georgia peaches are famous across the United States.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Chase the dog around the yard until he gets tired.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "We watched the sunrise over Victoria Harbour.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Rose, lily and daisy are my favorite flowers.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The Ford plant is hiring for the second shift.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Paris Hilton hotels? No, I meant hotels in Paris near the Louvre.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Grant funding for the project was approved yesterday.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Will you bring the salad to the potluck?",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Mercedes and BMW both announced new electric models.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Washington State is known for apples and rainy winters.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Florence is famous for Renaissance art and architecture.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Hope is a powerful motivator during hard times.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Sydney Harbour Bridge opened in 1932.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The conference agenda includes a keynote at 9:00, breakout sessions from 10:30 to 12:00, lunch in Hall B, and a panel on climate policy at 2:00. Attendees should pick up badges at registration desk 3. Wi-Fi details will be printed on the back of each badge.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "To reset your router, hold the recessed button on the back for ten seconds until the lights flash amber. Wait two minutes for it to reboot, then reconnect using the default network name printed on the label. If the problem persists, contact your internet provider.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Quarterly results: revenue of $48.2 million, up 14 percent; operating margin of 18 percent; and 312 new enterprise customers. Guidance for next quarter is $50 to $52 million. The board approved a share buyback of up to $20 million.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The hiking club meets on the first Saturday of each month at the north trailhead. Routes range from 4 to 12 miles. Bring water, snacks, sunscreen and layers. Dogs are welcome on leash. Carpools leave from the community center parking lot at 7 a.m.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Version 2.4.0 adds dark mode, fixes a memory leak in the image cache, and drops support for Python 3.8. The migration guide covers the renamed configuration keys. Download the release from the project page or install it with pip.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Our apartment building will have scheduled water shutoffs on Tuesday from 9 a.m. to 1 p.m. while the plumbers replace the main valve. Please store some water in advance. The laundry room will also be closed during this time.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The study enrolled 1,204 participants across 18 sites. The primary endpoint was reduction in systolic blood pressure at 12 weeks. Adverse events were mild and resolved without intervention. Full results will be published next spring.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Library hours are extended during finals week: 7 a.m. to 2 a.m., Sunday through Thursday. Group study rooms can be reserved up to three days in advance online. Quiet floors are three and four.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Welcome to the onboarding portal. Please complete the security training, set up two-factor authentication, and review the code of conduct. Your manager will schedule a one-on-one during your first week.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The city council approved a new zoning plan that allows mixed-use buildings along the waterfront. Construction is expected to start in 2026. Public comments can be submitted through the city website until the end of the month.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Call me when you land, I'll pick you up at arrivals.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Email me the slides after the meeting.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "My address changed, so I updated it in the HR portal.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "I need to renew my passport before the trip.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The bank called about a suspicious charge, but it turned out to be fine.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "I forgot my password again and had to reset it.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Text me when you're outside.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "I just got my test results back and everything looks normal.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Don't forget your ID for the airport.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "My phone number is the same as before.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The committee chair will send the agenda out on Thursday.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Questions about parking permits should go to the building manager.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The treasurer is handling reimbursements this quarter.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Ask the front desk if you need a visitor badge.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The team lead approved the change request this morning.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Our volunteer coordinator is organizing the cleanup next month.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The on-call engineer acknowledged the alert within five minutes.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The head coach wants everyone at practice by six.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The event organizer asked attendees to arrive early.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The property manager is scheduling the annual inspections.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The club secretary keeps the meeting minutes in the shared folder.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "If you have questions about grades, talk to the course instructor.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The project sponsor signed off on the revised budget.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The hiring manager will reach out after the final round.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The shift supervisor posts the schedule every Friday.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Contact the facilities team if the heating stops working.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The HR department is updating the leave policy.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The school principal announced a snow day.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The board president opened the meeting with a short update.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The landlord's office handles all maintenance requests.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The customer success team will follow up on your ticket.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The site foreman halted work until the inspection was complete.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The pastor thanked the volunteers after the service.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The garden coordinator assigns plots at the start of each season.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The editor asked for the draft by the end of the week.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The referee stopped the match because of the lightning.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The librarian can help you find older newspaper archives.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The office manager ordered new chairs for the break room.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The union representative will attend the next negotiation session.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The tour guide will meet the group outside the main entrance.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Whoever is on duty at the reception can sign for deliveries.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The department head is reviewing the travel requests.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The chair of the parents' association thanked everyone for the bake sale.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The dispatcher routed the nearest ambulance to the scene.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The quality inspector flagged three units for rework.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Build artifact digest: sha256:4b8e1f0c9a7d2e63f5b1a08c7d9e2f4a6b3c5d7e9f1a2b4c6d8e0f1a3b5c7d9e",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The request ID in the error log is 7f3c9a21-5e8b-4d02-b6a1-c93e0f4d8b57.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Deployed commit 9c1e4b7 to staging at noon.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The container ID is e3b0c44298fc and it restarted twice overnight.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Trace 00-4bf92f3577b34da6a3ce929d0e0e4736-00f067aa0ba902b7-01 shows the slow span in the payment service.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Object key: uploads/2024/05/c8f2e1a9-3b7d-4e6f-9a2c-1d5b8e7f0a34.png",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The MD5 of the installer is 5d41402abc4b2a76b9719d911017c592.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Primary key 81f4c2d0e7a93b56 not found in the replica.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The cache entry expired for hash 0x3fa91c7be2d4.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Git tag v4.2.0 points at a1b2c3d4e5f60718293a4b5c6d7e8f9012345678.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The job with UUID 2c5ea4c0-4067-11e9-8bad-9b1deb4d3b7d finished in 41 seconds.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Color #1E90FF is used for links, and #FF6347 for warnings.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The Ethereum smart contract for the public token sale is deployed at a published address listed on the project page.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Base64 sample from the docs: SGVsbG8sIHdvcmxkIQ==",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Revision 5f2a90c introduced the timeout regression in the scheduler.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Patient: [REDACTED]  MRN: [REDACTED]  Diagnosis: [REDACTED]",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Applicant name: ███████, SSN: ███-██-████",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Contact: {{contact_name}} <{{contact_email}}>",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Employee: <redacted>, Salary: <redacted>, Manager: <redacted>",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Cardholder: ********, Card: **** **** **** ****, Exp: **/**",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Name: N/A   Phone: N/A   Address: N/A",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Fields marked with * are required: Name*, Email*, Phone.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The warranty expires on 03/14/2027.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Deadline for submissions is 2025-01-31 at 23:59 UTC.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The store opened on 11/02/1954 and is still family-owned.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Train 4417 leaves platform 2 at 06:52 and arrives at 09:15.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The eclipse will be visible on 08/12/2026 from northern Spain.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Q3 closes on 09/30, and the audit starts on 10/14.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The firmware was released on 2023-06-19 as build 1142.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Office hours are 9:30 to 4:45, Monday through Thursday.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Invoice No. 48-310-7725 was paid by wire transfer.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Purchase order 219-44-6031 covers the replacement laptops.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Part number 555-0199-A fits both the 2019 and 2020 models.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Case file 2024-417-0093 was closed by the records office.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The shipment tracking number is 1Z 999 AA1 0123 4567 84.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Serial number 7731-2290-4418 is printed under the battery cover.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Order 3310-8821-004 will ship in two business days.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Reference code 902-55-1180 appears on every page of the contract.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The model number on the router is 612-555-0100X.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Batch 404-12-7788 of the adhesive failed quality control.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The support ticket number is 818-222-4190; include it in your reply.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Room booking confirmation 21-4409-73 is valid for Tuesday.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The conference code for the call is 776 214 9903.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Account 4400-0000-0000 is the internal test ledger used by finance.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Form W-9 must be submitted before the first invoice is processed.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Serena Williams announced her retirement from professional tennis in 2022.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Barack Obama served two terms as President of the United States.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Oprah Winfrey hosted her talk show for twenty-five seasons.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Cristiano Ronaldo has scored more international goals than any other man.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Angela Merkel was Chancellor of Germany for sixteen years.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Stephen Hawking wrote A Brief History of Time.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Beyoncé headlined the festival on Saturday night.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Elon Musk announced the rocket launch on social media.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Queen Elizabeth II reigned for seventy years.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Michael Jordan won six championships with the Chicago Bulls.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Toni Morrison won the Nobel Prize in Literature in 1993.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The novelist Haruki Murakami published a new collection of stories.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Iris, violet and holly all grew along the fence.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Hope and faith carried the team through a difficult season.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "We drove through Austin and Dallas on the way to Houston.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Grace under pressure is the mark of a good pilot.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Summer, Autumn and Winter are the names of the three meeting rooms.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The Jordan River flows into the Dead Sea.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Mark the calendar for the review on Monday.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Bill the client for the extra hours at the end of the month.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Pat the dough flat before cutting it into circles.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Sterling silver and ruby earrings were on sale.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Media inquiries: press@lumencorp.com or the main switchboard.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Our returns department is at 1200 Commerce Way, Dock 4, Reno, NV.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Call the reservations line at 1-888-555-0122 to change your booking.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Email info@riverbendlibrary.org for event information.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The clinic's front desk number is on the back of your appointment card.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Send your application to careers@northstarlabs.io.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The embassy's consular section is open for walk-ins on Wednesdays.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "For outages, text OUTAGE to the utility's service number.",
+      "label": 0,
+      "category": "false_positives"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "samples": [
+    {
+      "text": "Invoice # 65-222-1444",
+      "label": 0,
+      "category": "false_positive",
+      "added": "2026-09-26",
+      "note": "Reported by user: invoice number with SSN/phone-like digit grouping flagged as high-confidence PII."
+    },
+    {
+      "text": "If anyone has questions about the plot assignments, the committee chair is handling them this year.",
+      "label": 0,
+      "category": "false_positive",
+      "added": "2026-09-26",
+      "note": "Role without an identity. Flagged at 67% (layer 13) and 76% (layer 27) in the chunking demo."
+    },
+    {
+      "text": "The community garden committee met on Saturday to plan the spring planting. Volunteers agreed to rebuild the raised beds along the east fence and to replace the broken rain barrel. The seed order will include heirloom tomatoes, pole beans, kale and several varieties of squash. We also discussed adding a pollinator strip near the entrance, which should help the fruit trees. For the tool library, please sign items out in the binder by the shed. If anyone has questions about the plot assignments, Marguerite Okonkwo is handling them this year and asked that people text her at 718-555-0164 rather than calling. The next work day is scheduled for the first weekend of April, weather permitting. Bring gloves, water and a hat.",
+      "label": 1,
+      "category": "long_document",
+      "added": "2026-09-26",
+      "note": "One name and phone number buried in a long paragraph. Whole-input pooling missed 12-29% of cases like this; guards sentence chunking."
+    }
+  ]
+}

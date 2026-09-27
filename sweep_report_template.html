@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Layer Sweep Report</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page: #f9f9f7;
+    --surface: #fcfcfb;
+    --text-primary: #0b0b0b;
+    --text-secondary: #52514e;
+    --muted: #898781;
+    --grid: #e1e0d9;
+    --axis: #c3c2b7;
+    --border: rgba(11,11,11,0.10);
+    --series-auc: #2a78d6;
+    --series-f1: #eb6834;
+    --series-loss: #1baf7a;
+    --highlight-row: #eef4fc;
+    --warn: #fab219;
+    --ramp: #cde2fb,#b7d3f6,#9ec5f4,#86b6ef,#6da7ec,#5598e7,#3987e5,#2a78d6,#256abf,#1c5cab,#184f95,#104281,#0d366b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --page: #0d0d0d;
+      --surface: #1a1a19;
+      --text-primary: #ffffff;
+      --text-secondary: #c3c2b7;
+      --muted: #898781;
+      --grid: #2c2c2a;
+      --axis: #383835;
+      --border: rgba(255,255,255,0.10);
+      --series-auc: #3987e5;
+      --series-f1: #d95926;
+      --series-loss: #199e70;
+      --highlight-row: #1c2733;
+      --ramp: #0d366b,#104281,#184f95,#1c5cab,#256abf,#2a78d6,#3987e5,#5598e7,#6da7ec,#86b6ef,#9ec5f4,#b7d3f6,#cde2fb;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page: #0d0d0d;
+    --surface: #1a1a19;
+    --text-primary: #ffffff;
+    --text-secondary: #c3c2b7;
+    --muted: #898781;
+    --grid: #2c2c2a;
+    --axis: #383835;
+    --border: rgba(255,255,255,0.10);
+    --series-auc: #3987e5;
+    --series-f1: #d95926;
+    --series-loss: #199e70;
+    --highlight-row: #1c2733;
+    --ramp: #0d366b,#104281,#184f95,#1c5cab,#256abf,#2a78d6,#3987e5,#5598e7,#6da7ec,#86b6ef,#9ec5f4,#b7d3f6,#cde2fb;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--text-primary);
+    font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main { max-width: 1080px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 24px; font-weight: 600; margin: 0 0 4px; }
+  h2 { font-size: 16px; font-weight: 600; margin: 0; }
+  .meta { color: var(--text-secondary); margin: 0 0 24px; }
+  .sub { color: var(--text-secondary); margin: 2px 0 16px; font-size: 13px; }
+
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-bottom: 16px; }
+  .tile { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+  .tile .label { color: var(--text-secondary); font-size: 13px; }
+  .tile .value { font-size: 28px; font-weight: 600; margin-top: 4px; }
+  .tile .value.hero { font-size: 48px; line-height: 1.1; }
+  .tile .note { color: var(--muted); font-size: 12px; margin-top: 2px; }
+
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 16px; position: relative; }
+  .card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; color: var(--text-secondary); font-size: 13px; margin-bottom: 8px; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .key-line { width: 16px; height: 2px; border-radius: 1px; display: inline-block; }
+  .key-band { width: 16px; height: 10px; border-radius: 2px; display: inline-block; opacity: 0.25; }
+  .chart { width: 100%; }
+  svg { display: block; overflow: visible; }
+  svg text { font: 11px system-ui, -apple-system, "Segoe UI", sans-serif; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  svg .annot { fill: var(--text-secondary); font-size: 12px; font-weight: 600; }
+
+  .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .seg button {
+    font: inherit; font-size: 13px; background: transparent; color: var(--text-secondary);
+    border: 0; padding: 4px 10px; cursor: pointer;
+  }
+  .seg button + button { border-left: 1px solid var(--border); }
+  .seg button[aria-pressed="true"] { background: var(--highlight-row); color: var(--text-primary); font-weight: 600; }
+
+  .scale { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 12px; margin-top: 8px; font-variant-numeric: tabular-nums; }
+  .scale .bar { width: 160px; height: 8px; border-radius: 4px; }
+
+  .tooltip {
+    position: fixed; pointer-events: none; z-index: 10; display: none;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12); padding: 8px 10px; font-size: 12px; min-width: 150px;
+  }
+  .tooltip .t-head { color: var(--text-secondary); margin-bottom: 4px; }
+  .tooltip .t-row { display: flex; align-items: center; gap: 8px; }
+  .tooltip .t-row strong { color: var(--text-primary); font-variant-numeric: tabular-nums; }
+  .tooltip .t-row span.name { color: var(--text-secondary); }
+
+  .table-wrap { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  th, td { text-align: right; padding: 6px 10px; border-bottom: 1px solid var(--grid); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  th { color: var(--text-secondary); font-weight: 600; position: sticky; top: 0; background: var(--surface); }
+  th:first-child, td:first-child { text-align: left; }
+  tr.best td { background: var(--highlight-row); font-weight: 600; }
+  td .pm { color: var(--muted); font-weight: 400; }
+  .flag { color: var(--text-secondary); }
+  .flag::before { content: "⚠ "; color: var(--warn); }
+  ul.files { margin: 4px 0 0; padding-left: 18px; color: var(--text-secondary); }
+  select {
+    font: inherit; font-size: 13px; color: var(--text-primary); background: var(--surface);
+    border: 1px solid var(--border); border-radius: 8px; padding: 4px 8px;
+  }
+  td.text-cell, th.text-cell { text-align: left; white-space: normal; min-width: 280px; }
+  .empty { color: var(--text-secondary); padding: 8px 0; }
+  code { font-size: 12px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Layer sweep</h1>
+  <p class="meta" id="meta"></p>
+
+  <section class="tiles" id="tiles"></section>
+
+  <section class="card">
+    <h2>Errors by category</h2>
+    <p class="sub">Out-of-fold mistakes at the 0.5 threshold: every sample is scored by a probe that never saw it. Darker means a higher share of that category was misclassified. Overall ROC-AUC saturates near 1.0, so this is where layers actually differ.</p>
+    <div class="chart" id="cats"></div>
+    <div class="scale" id="cat-scale"></div>
+  </section>
+
+  <section class="card">
+    <h2>Mean ROC-AUC and F1 by layer</h2>
+    <p class="sub">Cross-validated mean across folds. The shaded band is ±1 standard deviation across folds.</p>
+    <div class="legend">
+      <span><i class="key-line" style="background:var(--series-auc)"></i>ROC-AUC</span>
+      <span><i class="key-line" style="background:var(--series-f1)"></i>F1</span>
+      <span><i class="key-band" style="background:var(--text-secondary)"></i>±1 std</span>
+    </div>
+    <div class="chart" id="lines"></div>
+  </section>
+
+  <section class="card">
+    <h2>Mean log loss by layer</h2>
+    <p class="sub">Lower is better. This still separates layers when ROC-AUC is at or near 1.0 across the board.</p>
+    <div class="chart" id="loss"></div>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <div>
+        <h2>Per-fold scores</h2>
+        <p class="sub">Each cell is one layer on one cross-validation fold. A layer that is consistent across folds is more trustworthy than one with a single lucky fold.</p>
+      </div>
+      <div class="seg" id="metric-toggle" role="group" aria-label="Heatmap metric"></div>
+    </div>
+    <div class="chart" id="heat"></div>
+    <div class="scale" id="scale"></div>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <div>
+        <h2>Misclassified examples</h2>
+        <p class="sub">Most confidently wrong first. Use these to decide what training data to add next.</p>
+      </div>
+      <label class="sub">Layer <select id="mis-layer"></select></label>
+    </div>
+    <div class="table-wrap"><table id="mis-table"></table></div>
+  </section>
+
+  <section class="card">
+    <h2>All layers</h2>
+    <p class="sub">Ranked by out-of-fold errors, then by mean log loss. Metric values are mean ± std across folds.</p>
+    <div class="table-wrap"><table id="table"></table></div>
+  </section>
+
+  <section class="card">
+    <h2>Run details</h2>
+    <div id="details"></div>
+  </section>
+</main>
+<div class="tooltip" id="tooltip" role="status"></div>
+
+<script>
+const DATA = /*__SWEEP_DATA__*/null;
+
+const NS = "http://www.w3.org/2000/svg";
+const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+const fmt = (v, d = 3) => v.toFixed(d);
+const N = DATA.num_states;
+const best = DATA.ranking[0];
+const top3 = new Set(DATA.ranking.slice(0, 3));
+const rel = (L) => L - N;  // negative index, as used by settings.json / --layer
+const layerName = (L) => `Layer ${L} (${rel(L)})`;
+const byLayer = DATA.layers;
+
+function el(tag, attrs = {}, parent) {
+  const node = document.createElementNS(NS, tag);
+  for (const [k, v] of Object.entries(attrs)) node.setAttribute(k, v);
+  if (parent) parent.appendChild(node);
+  return node;
+}
+function h(tag, text, cls) {
+  const node = document.createElement(tag);
+  if (text !== undefined) node.textContent = text;
+  if (cls) node.className = cls;
+  return node;
+}
+
+// ---------- Tooltip ----------
+const tip = document.getElementById("tooltip");
+function showTip(evt, head, rows) {
+  tip.replaceChildren();
+  tip.appendChild(h("div", head, "t-head"));
+  for (const r of rows) {
+    const row = h("div", undefined, "t-row");
+    if (r.color) {
+      const key = h("i", undefined, "key-line");
+      key.style.background = r.color;
+      row.appendChild(key);
+    }
+    row.appendChild(h("strong", r.value));
+    row.appendChild(h("span", r.name, "name"));
+    tip.appendChild(row);
+  }
+  tip.style.display = "block";
+  const pad = 14, w = tip.offsetWidth, hgt = tip.offsetHeight;
+  let x = evt.clientX + pad, y = evt.clientY + pad;
+  if (x + w > window.innerWidth - 8) x = evt.clientX - w - pad;
+  if (y + hgt > window.innerHeight - 8) y = evt.clientY - hgt - pad;
+  tip.style.left = x + "px";
+  tip.style.top = y + "px";
+}
+const hideTip = () => { tip.style.display = "none"; };
+
+// ---------- Shared axis helpers ----------
+function niceStep(span, target = 5) {
+  const raw = span / target;
+  const pow = Math.pow(10, Math.floor(Math.log10(raw)));
+  for (const m of [1, 2, 2.5, 5, 10]) if (m * pow >= raw) return m * pow;
+  return 10 * pow;
+}
+function xTickEvery(width) {
+  const perTick = width / N;
+  return perTick >= 26 ? 1 : perTick >= 13 ? 2 : 4;
+}
+function drawXAxis(svg, x, y0, width) {
+  const every = xTickEvery(width);
+  for (let L = 0; L < N; L++) {
+    if (L % every !== 0 && L !== N - 1) continue;
+    el("text", { x: x(L), y: y0 + 16, "text-anchor": "middle" }, svg).textContent = L;
+  }
+  el("text", { x: x((N - 1) / 2), y: y0 + 32, "text-anchor": "middle" }, svg).textContent = "Layer (hidden_states index)";
+}
+function drawYGrid(svg, y, lo, hi, left, right, digits) {
+  const step = niceStep(hi - lo);
+  const start = Math.ceil(lo / step - 1e-9) * step;
+  for (let v = start; v <= hi + 1e-9; v += step) {
+    el("line", { x1: left, x2: right, y1: y(v), y2: y(v), stroke: css("--grid"), "stroke-width": 1 }, svg);
+    el("text", { x: left - 8, y: y(v) + 4, "text-anchor": "end" }, svg).textContent = v.toFixed(digits);
+  }
+}
+
+// ---------- Header, tiles, details ----------
+function renderHeader() {
+  const c = DATA.class_counts;
+  document.getElementById("meta").textContent =
+    `${DATA.n_samples} samples (${c.pii} PII, ${c.clean} clean) · ${DATA.folds}-fold cross-validation · ` +
+    `${N} hidden states · ${DATA.model_path} · ${DATA.generated}`;
+
+  const b = byLayer[best];
+  const tiles = [
+    { label: "Best layer", value: String(best), note: `${rel(best)} as a negative index`, hero: true },
+    { label: "ROC-AUC", value: fmt(b.mean.roc_auc), note: `± ${fmt(b.std.roc_auc)} · F1 ${fmt(b.mean.f1)}` },
+    { label: "Errors", value: String(b.errors), note: `of ${DATA.n_samples} samples, out of fold` },
+    { label: "Log loss", value: fmt(b.mean.log_loss, 4), note: "lower is better" },
+    { label: "Runners-up", value: DATA.ranking.slice(1, 3).join(", "), note: "2nd and 3rd ranked layers" },
+  ];
+  const wrap = document.getElementById("tiles");
+  for (const t of tiles) {
+    const tile = h("div", undefined, "tile");
+    tile.appendChild(h("div", t.label, "label"));
+    tile.appendChild(h("div", t.value, t.hero ? "value hero" : "value"));
+    tile.appendChild(h("div", t.note, "note"));
+    wrap.appendChild(tile);
+  }
+
+  const d = document.getElementById("details");
+  d.appendChild(h("div", "Training data:", "sub"));
+  const ul = h("ul", undefined, "files");
+  for (const f of DATA.files) { const li = h("li"); li.appendChild(h("code", f)); ul.appendChild(li); }
+  d.appendChild(ul);
+  if (DATA.saved.length) {
+    d.appendChild(h("div", "Probes refit on all data and saved:", "sub"));
+    const ul2 = h("ul", undefined, "files");
+    for (const f of DATA.saved) { const li = h("li"); li.appendChild(h("code", f)); ul2.appendChild(li); }
+    d.appendChild(ul2);
+  }
+  const hint = h("p", undefined, "sub");
+  hint.append("To use the best layer, set ");
+  hint.appendChild(h("code", `"layer": ${best}`));
+  hint.append(" in settings.json and run train.py, or point predict.py at a saved probe with ");
+  hint.appendChild(h("code", `--weights`));
+  hint.append(".");
+  d.appendChild(hint);
+}
+
+// ---------- Errors by category heatmap ----------
+function renderCats() {
+  const host = document.getElementById("cats");
+  host.replaceChildren();
+  const cats = Object.keys(DATA.category_sizes);
+  const W = host.clientWidth;
+  const labelW = Math.min(150, Math.max(90, W * 0.22));
+  const m = { l: labelW, r: 16, t: 8, b: 40 };
+  const cellH = 28;
+  const H = m.t + cats.length * cellH + m.b;
+  const svg = el("svg", { width: W, height: H, viewBox: `0 0 ${W} ${H}`, role: "img",
+    "aria-label": "Heatmap of misclassified share per category and layer" }, host);
+
+  const rate = (r, c) => r.by_category[c] / DATA.category_sizes[c];
+  // Cap the color scale at the 95th percentile of non-zero rates: otherwise one very bad layer
+  // (usually layer 0, the raw embeddings) sets the top and every other layer looks identical
+  const nonzero = byLayer.flatMap((r) => cats.map((c) => rate(r, c))).filter((v) => v > 0).sort((a, b) => a - b);
+  const maxRate = nonzero.length ? nonzero[Math.min(nonzero.length - 1, Math.floor(nonzero.length * 0.95))] : 1;
+  const capped = nonzero.length && maxRate < nonzero[nonzero.length - 1];
+  const band = (W - m.l - m.r) / N;
+
+  cats.forEach((c, i) => {
+    el("text", { x: m.l - 8, y: m.t + i * cellH + cellH / 2 + 4, "text-anchor": "end" }, svg)
+      .textContent = `${c} (${DATA.category_sizes[c]})`;
+  });
+  const every = xTickEvery(W - m.l - m.r);
+  for (let L = 0; L < N; L++) {
+    if (L % every !== 0 && L !== N - 1) continue;
+    el("text", { x: m.l + band * (L + 0.5), y: H - m.b + 16, "text-anchor": "middle" }, svg).textContent = L;
+  }
+  el("text", { x: m.l + (W - m.l - m.r) / 2, y: H - m.b + 32, "text-anchor": "middle" }, svg).textContent = "Layer (hidden_states index)";
+
+  for (const r of byLayer) {
+    cats.forEach((c, i) => {
+      const e = r.by_category[c];
+      const cell = el("rect", { x: m.l + band * r.layer + 1, y: m.t + i * cellH + 1, width: Math.max(1, band - 2),
+        height: cellH - 2, rx: 2, fill: e ? rampColor(Math.max(0.15, Math.min(1, rate(r, c) / maxRate))) : css("--grid") }, svg);
+      cell.addEventListener("pointermove", (evt) => {
+        cell.setAttribute("stroke", css("--text-primary")); cell.setAttribute("stroke-width", 1.5);
+        showTip(evt, `${layerName(r.layer)} · ${c}`, [
+          { value: `${e} of ${DATA.category_sizes[c]}`, name: "misclassified" },
+          { value: `${(rate(r, c) * 100).toFixed(1)}%`, name: "error rate" },
+          { value: String(r.errors), name: "errors across all categories" },
+        ]);
+      });
+      cell.addEventListener("pointerleave", () => { cell.removeAttribute("stroke"); hideTip(); });
+    });
+  }
+  el("rect", { x: m.l + band * best, y: m.t - 2, width: band, height: cats.length * cellH + 4, rx: 3,
+    fill: "none", stroke: css("--text-primary"), "stroke-width": 1.5 }, svg);
+
+  const scale = document.getElementById("cat-scale");
+  scale.replaceChildren();
+  const zero = h("span", undefined, "bar");
+  zero.style.cssText = `width:16px;background:${css("--grid")}`;
+  const bar = h("span", undefined, "bar");
+  bar.style.background = `linear-gradient(to right, ${css("--ramp")})`;
+  scale.append(zero, " 0 errors · ", bar, ` ${capped ? "≥ " : "up to "}${(maxRate * 100).toFixed(1)}% of a category · outlined column = best layer`);
+}
+
+// ---------- Misclassified examples ----------
+function renderMisSelect() {
+  const sel = document.getElementById("mis-layer");
+  for (const L of DATA.ranking) {
+    const opt = h("option", `${L} (${rel(L)}) · ${byLayer[L].errors} errors${L === best ? " · best" : ""}`);
+    opt.value = L;
+    sel.appendChild(opt);
+  }
+  sel.addEventListener("change", () => renderMis(Number(sel.value)));
+  renderMis(best);
+}
+function renderMis(L) {
+  const table = document.getElementById("mis-table");
+  table.replaceChildren();
+  const rows = byLayer[L].misclassified;
+  if (!rows.length) {
+    const td = h("td", "No misclassified samples at this layer.", "empty");
+    const tr = h("tr"); tr.appendChild(td); table.appendChild(tr);
+    return;
+  }
+  const head = h("tr");
+  for (const c of ["p(PII)", "Expected", "Category"]) head.appendChild(h("th", c));
+  head.appendChild(h("th", "Text", "text-cell"));
+  const thead = h("thead"); thead.appendChild(head); table.appendChild(thead);
+  const tbody = h("tbody");
+  for (const [idx, p] of rows) {
+    const s = DATA.samples[idx];
+    const tr = h("tr");
+    tr.appendChild(h("td", `${(p * 100).toFixed(1)}%`));
+    tr.appendChild(h("td", s.label === 1 ? "PII" : "clean"));
+    tr.appendChild(h("td", s.category));
+    tr.appendChild(h("td", s.text, "text-cell"));
+    tbody.appendChild(tr);
+  }
+  table.appendChild(tbody);
+}
+
+// ---------- Chart 1: ROC-AUC + F1 lines ----------
+function renderLines() {
+  const host = document.getElementById("lines");
+  host.replaceChildren();
+  const W = host.clientWidth, H = 300;
+  const m = { l: 44, r: 64, t: 24, b: 40 };
+  const svg = el("svg", { width: W, height: H, viewBox: `0 0 ${W} ${H}`, role: "img",
+    "aria-label": "Line chart of mean ROC-AUC and F1 by layer" }, host);
+
+  const series = [
+    { key: "roc_auc", name: "ROC-AUC", color: css("--series-auc") },
+    { key: "f1", name: "F1", color: css("--series-f1") },
+  ];
+  let lo = Infinity;
+  for (const s of series) for (const r of byLayer) lo = Math.min(lo, r.mean[s.key] - r.std[s.key]);
+  lo = Math.max(0, Math.floor(lo * 20) / 20);
+  if (1 - lo < 0.05) lo = 0.95;
+  const hi = 1;
+
+  const x = (L) => m.l + (L / (N - 1)) * (W - m.l - m.r);
+  const y = (v) => m.t + (1 - (Math.min(v, hi) - lo) / (hi - lo)) * (H - m.t - m.b);
+
+  drawYGrid(svg, y, lo, hi, m.l, W - m.r, 2);
+  el("line", { x1: m.l, x2: W - m.r, y1: H - m.b, y2: H - m.b, stroke: css("--axis"), "stroke-width": 1 }, svg);
+  drawXAxis(svg, x, H - m.b, W - m.l - m.r);
+
+  // Best layer marker
+  el("line", { x1: x(best), x2: x(best), y1: m.t - 8, y2: H - m.b, stroke: css("--axis"), "stroke-width": 1 }, svg);
+  el("text", { x: x(best), y: m.t - 12, "text-anchor": best > N * 0.8 ? "end" : "middle", class: "annot" }, svg)
+    .textContent = `★ best: layer ${best}`;
+
+  for (const s of series) {
+    const upper = byLayer.map((r) => `${x(r.layer)},${y(Math.min(hi, r.mean[s.key] + r.std[s.key]))}`);
+    const lower = byLayer.slice().reverse().map((r) => `${x(r.layer)},${y(Math.max(lo, r.mean[s.key] - r.std[s.key]))}`);
+    el("polygon", { points: upper.concat(lower).join(" "), fill: s.color, "fill-opacity": 0.1 }, svg);
+  }
+  for (const s of series) {
+    const d = byLayer.map((r, i) => `${i ? "L" : "M"}${x(r.layer)},${y(r.mean[s.key])}`).join("");
+    el("path", { d, fill: "none", stroke: s.color, "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }, svg);
+  }
+  // Markers at the best layer, with a surface ring
+  for (const s of series) {
+    el("circle", { cx: x(best), cy: y(byLayer[best].mean[s.key]), r: 4.5, fill: s.color, stroke: css("--surface"), "stroke-width": 2 }, svg);
+  }
+  // Direct end labels only when they don't collide; the legend carries identity otherwise
+  const endY = series.map((s) => y(byLayer[N - 1].mean[s.key]));
+  if (Math.abs(endY[0] - endY[1]) >= 14) {
+    series.forEach((s, i) => {
+      el("text", { x: W - m.r + 8, y: endY[i] + 4, class: "annot" }, svg).textContent = s.name;
+    });
+  }
+
+  // Crosshair + tooltip
+  const cross = el("line", { y1: m.t, y2: H - m.b, stroke: css("--text-secondary"), "stroke-width": 1, visibility: "hidden" }, svg);
+  const dots = series.map((s) => el("circle", { r: 4.5, fill: s.color, stroke: css("--surface"), "stroke-width": 2, visibility: "hidden" }, svg));
+  const hit = el("rect", { x: m.l - 10, y: 0, width: W - m.l - m.r + 20, height: H - m.b + 4, fill: "transparent" }, svg);
+  hit.addEventListener("pointermove", (evt) => {
+    const box = svg.getBoundingClientRect();
+    const px = evt.clientX - box.left;
+    const L = Math.max(0, Math.min(N - 1, Math.round(((px - m.l) / (W - m.l - m.r)) * (N - 1))));
+    const r = byLayer[L];
+    cross.setAttribute("x1", x(L)); cross.setAttribute("x2", x(L)); cross.setAttribute("visibility", "visible");
+    series.forEach((s, i) => {
+      dots[i].setAttribute("cx", x(L)); dots[i].setAttribute("cy", y(r.mean[s.key])); dots[i].setAttribute("visibility", "visible");
+    });
+    showTip(evt, layerName(L) + (L === best ? " · best" : ""), series.map((s) => ({
+      color: s.color, value: `${fmt(r.mean[s.key])} ± ${fmt(r.std[s.key])}`, name: s.name,
+    })));
+  });
+  hit.addEventListener("pointerleave", () => {
+    cross.setAttribute("visibility", "hidden");
+    dots.forEach((d) => d.setAttribute("visibility", "hidden"));
+    hideTip();
+  });
+}
+
+// ---------- Chart 2: log loss columns ----------
+function barPath(cx, w, yTop, yBase) {
+  const r = Math.min(4, w / 2, Math.max(0, yBase - yTop));
+  const x0 = cx - w / 2, x1 = cx + w / 2;
+  return `M${x0},${yBase}V${yTop + r}Q${x0},${yTop} ${x0 + r},${yTop}H${x1 - r}Q${x1},${yTop} ${x1},${yTop + r}V${yBase}Z`;
+}
+function renderLoss() {
+  const host = document.getElementById("loss");
+  host.replaceChildren();
+  const W = host.clientWidth, H = 240;
+  const m = { l: 44, r: 16, t: 24, b: 40 };
+  const svg = el("svg", { width: W, height: H, viewBox: `0 0 ${W} ${H}`, role: "img",
+    "aria-label": "Column chart of mean log loss by layer" }, host);
+
+  const vals = byLayer.map((r) => r.mean.log_loss);
+  const step = niceStep(Math.max(...vals));
+  const hi = Math.ceil(Math.max(...vals) / step) * step || 1;
+  const band = (W - m.l - m.r) / N;
+  const x = (L) => m.l + band * (L + 0.5);
+  const y = (v) => m.t + (1 - v / hi) * (H - m.t - m.b);
+
+  drawYGrid(svg, y, 0, hi, m.l, W - m.r, hi < 0.1 ? 3 : 2);
+  const every = xTickEvery(W - m.l - m.r);
+  for (let L = 0; L < N; L++) {
+    if (L % every !== 0 && L !== N - 1) continue;
+    el("text", { x: x(L), y: H - m.b + 16, "text-anchor": "middle" }, svg).textContent = L;
+  }
+  el("text", { x: m.l + (W - m.l - m.r) / 2, y: H - m.b + 32, "text-anchor": "middle" }, svg).textContent = "Layer (hidden_states index)";
+
+  const color = css("--series-loss");
+  const bw = Math.max(2, Math.min(24, band - 2));
+  for (const r of byLayer) {
+    const L = r.layer;
+    const bar = el("path", { d: barPath(x(L), bw, y(r.mean.log_loss), y(0)), fill: color,
+      "fill-opacity": top3.has(L) ? 1 : 0.55 }, svg);
+    const hitRect = el("rect", { x: x(L) - band / 2, y: m.t, width: band, height: H - m.t - m.b, fill: "transparent" }, svg);
+    hitRect.addEventListener("pointermove", (evt) => {
+      bar.setAttribute("fill-opacity", 0.8);
+      showTip(evt, layerName(L) + (L === best ? " · best" : ""), [
+        { color, value: `${fmt(r.mean.log_loss, 4)} ± ${fmt(r.std.log_loss, 4)}`, name: "log loss" },
+        { value: `#${DATA.ranking.indexOf(L) + 1}`, name: `rank of ${N}` },
+      ]);
+    });
+    hitRect.addEventListener("pointerleave", () => { bar.setAttribute("fill-opacity", top3.has(L) ? 1 : 0.55); hideTip(); });
+  }
+  el("line", { x1: m.l, x2: W - m.r, y1: y(0), y2: y(0), stroke: css("--axis"), "stroke-width": 1 }, svg);
+  el("text", { x: x(best), y: y(byLayer[best].mean.log_loss) - 8, "text-anchor": "middle", class: "annot" }, svg).textContent = "★";
+}
+
+// ---------- Chart 3: per-fold heatmap ----------
+const HEAT_METRICS = [
+  { key: "roc_auc", name: "ROC-AUC", digits: 3 },
+  { key: "f1", name: "F1", digits: 3 },
+  { key: "accuracy", name: "Accuracy", digits: 3 },
+  { key: "log_loss", name: "Log loss", digits: 4, lowerBetter: true },
+];
+let heatMetric = "roc_auc";
+function rampColor(t) {
+  const ramp = css("--ramp").split(",").map((s) => s.trim());
+  const i = Math.max(0, Math.min(ramp.length - 1, Math.round(t * (ramp.length - 1))));
+  return ramp[i];
+}
+function renderHeat() {
+  const metric = HEAT_METRICS.find((mm) => mm.key === heatMetric);
+  const host = document.getElementById("heat");
+  host.replaceChildren();
+  const W = host.clientWidth;
+  const m = { l: 56, r: 16, t: 8, b: 40 };
+  const cellH = 28, rows = DATA.folds;
+  const H = m.t + rows * cellH + m.b;
+  const svg = el("svg", { width: W, height: H, viewBox: `0 0 ${W} ${H}`, role: "img",
+    "aria-label": `Heatmap of per-fold ${metric.name} by layer` }, host);
+
+  const all = byLayer.flatMap((r) => r.folds[metric.key]);
+  const lo = Math.min(...all), hi = Math.max(...all);
+  const span = hi - lo || 1;
+  const band = (W - m.l - m.r) / N;
+
+  for (let f = 0; f < rows; f++) {
+    el("text", { x: m.l - 8, y: m.t + f * cellH + cellH / 2 + 4, "text-anchor": "end" }, svg).textContent = `fold ${f + 1}`;
+  }
+  const every = xTickEvery(W - m.l - m.r);
+  for (let L = 0; L < N; L++) {
+    if (L % every !== 0 && L !== N - 1) continue;
+    el("text", { x: m.l + band * (L + 0.5), y: H - m.b + 16, "text-anchor": "middle" }, svg).textContent = L;
+  }
+  el("text", { x: m.l + (W - m.l - m.r) / 2, y: H - m.b + 32, "text-anchor": "middle" }, svg).textContent = "Layer (hidden_states index)";
+
+  for (const r of byLayer) {
+    r.folds[metric.key].forEach((v, f) => {
+      const cx = m.l + band * r.layer, cy = m.t + f * cellH;
+      const cell = el("rect", { x: cx + 1, y: cy + 1, width: Math.max(1, band - 2), height: cellH - 2, rx: 2,
+        fill: rampColor(hi === lo ? 1 : (v - lo) / span) }, svg);
+      cell.addEventListener("pointermove", (evt) => {
+        cell.setAttribute("stroke", css("--text-primary")); cell.setAttribute("stroke-width", 1.5);
+        showTip(evt, `${layerName(r.layer)} · fold ${f + 1}`, [{ value: fmt(v, metric.digits), name: metric.name }]);
+      });
+      cell.addEventListener("pointerleave", () => { cell.removeAttribute("stroke"); hideTip(); });
+    });
+  }
+  // Best column outline
+  el("rect", { x: m.l + band * best, y: m.t - 2, width: band, height: rows * cellH + 4, rx: 3,
+    fill: "none", stroke: css("--text-primary"), "stroke-width": 1.5 }, svg);
+
+  const scale = document.getElementById("scale");
+  scale.replaceChildren();
+  const bar = h("span", undefined, "bar");
+  bar.style.background = `linear-gradient(to right, ${css("--ramp")})`;
+  scale.append(fmt(lo, metric.digits), bar, fmt(hi, metric.digits),
+    metric.lowerBetter ? " · lower is better" : " · higher is better", " · outlined column = best layer");
+}
+function renderToggle() {
+  const wrap = document.getElementById("metric-toggle");
+  for (const mm of HEAT_METRICS) {
+    const b = h("button", mm.name);
+    b.type = "button";
+    b.setAttribute("aria-pressed", mm.key === heatMetric);
+    b.addEventListener("click", () => {
+      heatMetric = mm.key;
+      for (const other of wrap.children) other.setAttribute("aria-pressed", other === b);
+      renderHeat();
+    });
+    wrap.appendChild(b);
+  }
+}
+
+// ---------- Table ----------
+function renderTable() {
+  const table = document.getElementById("table");
+  const head = h("tr");
+  for (const c of ["Layer", "Rank", "Errors", "ROC-AUC", "F1", "Accuracy", "Log loss", "Notes"]) head.appendChild(h("th", c));
+  const thead = h("thead"); thead.appendChild(head); table.appendChild(thead);
+  const tbody = h("tbody");
+  for (const L of DATA.ranking) {
+    const r = byLayer[L];
+    const tr = h("tr");
+    if (L === best) tr.className = "best";
+    tr.appendChild(h("td", `${L === best ? "★ " : ""}${L} (${rel(L)})`));
+    tr.appendChild(h("td", String(DATA.ranking.indexOf(L) + 1)));
+    tr.appendChild(h("td", String(r.errors)));
+    for (const [k, d] of [["roc_auc", 3], ["f1", 3], ["accuracy", 3], ["log_loss", 4]]) {
+      const td = h("td", fmt(r.mean[k], d) + " ");
+      td.appendChild(h("span", `± ${fmt(r.std[k], d)}`, "pm"));
+      tr.appendChild(td);
+    }
+    const notes = h("td");
+    if (!r.converged) notes.appendChild(h("span", "did not converge", "flag"));
+    tr.appendChild(notes);
+    tbody.appendChild(tr);
+  }
+  table.appendChild(tbody);
+}
+
+function renderCharts() { renderCats(); renderLines(); renderLoss(); renderHeat(); }
+renderHeader();
+renderToggle();
+renderTable();
+renderMisSelect();
+renderCharts();
+let resizeTimer;
+window.addEventListener("resize", () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(renderCharts, 100); });
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", renderCharts);
+</script>
+</body>
+</html>
