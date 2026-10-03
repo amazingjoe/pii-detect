@@ -14,7 +14,7 @@ from sklearn.metrics import accuracy_score, f1_score, log_loss, roc_auc_score
 from sklearn.model_selection import StratifiedKFold
 
 from extract_features import FeatureExtractor
-from settings import load_settings
+from settings import add_selection_args, load_settings, preparse_selection
 from train import load_dataset_from_json
 
 REPORT_TEMPLATE = Path(__file__).resolve().parent / "sweep_report_template.html"
@@ -148,18 +148,20 @@ def main():
     settings = load_settings()
     train_cfg = settings["train"]
     sweep_cfg = settings["sweep"]
+    sel = preparse_selection(settings)
 
     parser = argparse.ArgumentParser(
         description="Cross-validate a linear probe on every hidden layer and report which layer performs best."
     )
+    add_selection_args(parser, settings)
     parser.add_argument(
         "--include-done",
         action="store_true",
         help="Also use JSON files in the done directory (files are never moved by the sweep)",
     )
-    parser.add_argument("--prep-dir", type=str, default=train_cfg["prep_dir"], help="(default: settings.json train.prep_dir)")
-    parser.add_argument("--done-dir", type=str, default=train_cfg["done_dir"], help="(default: settings.json train.done_dir)")
-    parser.add_argument("--model-path", type=str, default=settings["model_path"], help="(default: settings.json model_path)")
+    parser.add_argument("--prep-dir", type=str, default=sel["prep_dir"], help="(default: the selected head's prep_dir)")
+    parser.add_argument("--done-dir", type=str, default=sel["done_dir"], help="(default: the selected head's done_dir)")
+    parser.add_argument("--model-path", type=str, default=sel["model_path"], help="(default: the selected model's path)")
     parser.add_argument("--batch-size", type=int, default=train_cfg["batch_size"], help="(default: settings.json train.batch_size)")
     parser.add_argument("--random-state", type=int, default=train_cfg["random_state"], help="(default: settings.json train.random_state)")
     parser.add_argument("--folds", type=int, default=sweep_cfg["folds"], help="Cross-validation folds (default: settings.json sweep.folds)")
@@ -277,7 +279,7 @@ def main():
         f"ROC-AUC {best['mean']['roc_auc']:.3f} ± {best['std']['roc_auc']:.3f} | "
         f"log loss {best['mean']['log_loss']:.4f}"
     )
-    print(f"To make it the default, set \"layer\": {ranking[0]} in settings.json and run train.py.")
+    print(f"To make it the default, set \"layer\": {ranking[0]} on model '{sel['model_name']}' in settings.json and run train.py.")
 
 
 if __name__ == "__main__":

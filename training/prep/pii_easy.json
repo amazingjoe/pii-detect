@@ -495,6 +495,86 @@
       "text": "Card: 6011 0009 9013 9424, name on card: Rebecca Stone",
       "label": 1,
       "category": "pii_easy"
+    },
+    {
+      "text": "Please send the agreement to Alice Smith at alice@example.com immediately.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Kindly verify that user Robert King has updated his email to rking@domain.org.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Reach out to Jane Doe at jane.doe@corp.net regarding the software licenses.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "My personal email address is david.wong99@gmail.com if you need to reach me.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Employee SSN on file is 000-12-3456 for tax withholding purposes.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Tax identification document lists James Wilson with TIN 99-8877665.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "The borrower's social security number is 123-45-6789 on the loan application.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Please verify the patient's identity using SSN: 678-90-1234.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Applicant state driver license number is DL-98765432-CA issued to Thomas Wright.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Passport number A12345678 belongs to traveler Maria Garcia.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Account holder Thomas Wayne: routing number 021000021 and account number 987654321.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Wire transfer instructions for beneficiary Nancy Drew: Bank of America, account 4400-1298-3341.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Direct deposit authorization for employee Karen White: checking account 1122334455.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "The temporary login password for user account jsmith is Welcome#2024!",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "API access key generated for developer Brian Kelly: sk_live_98320491823901.",
+      "label": 1,
+      "category": "pii_easy"
+    },
+    {
+      "text": "Database root credentials provided to contractor Alan Turing: user=aturing_admin pass=SecretPass99.",
+      "label": 1,
+      "category": "pii_easy"
     }
   ]
 }

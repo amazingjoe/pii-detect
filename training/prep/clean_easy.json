@@ -500,6 +500,181 @@
       "text": "Chess teaches patience and planning ahead.",
       "label": 0,
       "category": "clean_easy"
+    },
+    {
+      "text": "I like cats and dogs.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "I really enjoy drinking black coffee in the morning.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Pizza with extra cheese is my favorite dinner.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "I am thinking about learning to play the acoustic guitar.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The traffic on the highway was terrible this afternoon.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "I need to go grocery shopping for apples, bread, and milk.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Summer is definitely my favorite season of the year.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "We should catch up over lunch sometime next week.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Then he walked to the park and that wasn't right. They had made it to Ridge Crest before the sun set.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The gentle rain tapped softly against the window glass.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "She sat quietly on the front porch watching the fireflies.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The ancient castle stood majestically atop the misty hill.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "A cool breeze swept through the quiet forest clearing.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "He turned the page of the book and took a sip of tea.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The waves crashed rhythmically against the rocky shore.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Hello world.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Good morning everyone, let's get started.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Thank you so much for your assistance with this.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Have a wonderful weekend ahead!",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "See you at the team meeting later.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Looking forward to hearing from you soon.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Sounds good, thanks for confirming.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Photosynthesis is the process by which green plants create energy from sunlight.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Paris is the capital and most populous city of France.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Water freezes at zero degrees Celsius under standard atmospheric pressure.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Python and Rust are popular modern programming languages.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The human heart beats approximately one hundred thousand times per day.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Jupiter has eighty confirmed moons orbiting around it.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The quarterly financial report will be presented to shareholders on Tuesday.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "Please review the attached project roadmap and provide your feedback.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The marketing campaign generated a thirty percent increase in website traffic.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "All department heads must submit their budget proposals by the end of the month.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The client presentation has been rescheduled to Thursday at two o'clock.",
+      "label": 0,
+      "category": "clean_easy"
+    },
+    {
+      "text": "The company announced plans to expand into international markets next fiscal year.",
+      "label": 0,
+      "category": "clean_easy"
     }
   ]
 }

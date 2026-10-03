@@ -1,4 +1,5 @@
 import argparse
+import json
 import re
 import sys
 from pathlib import Path
@@ -7,7 +8,7 @@ from typing import List, NamedTuple, Optional, Tuple
 import numpy as np
 
 from extract_features import FeatureExtractor
-from settings import load_settings
+from settings import add_selection_args, load_settings, preparse_selection
 
 # Sentence boundary: terminal punctuation followed by whitespace, or a line break.
 # Requiring whitespace keeps emails, decimals and IP addresses in one piece.
@@ -64,12 +65,14 @@ class ProbeClassifier:
             self.layer_index = fallback_layer
             print(
                 f"Warning: '{weights_path}' has no stored layer (trained before settings.json); "
-                f"using layer {fallback_layer} from settings. Retrain to embed it."
+                f"using layer {fallback_layer} from settings. Retrain to embed it.",
+                file=sys.stderr,
             )
         if "model_path" in data and str(data["model_path"]) != model_path:
             print(
                 f"Warning: probe was trained with model '{data['model_path']}' "
-                f"but '{model_path}' is being loaded."
+                f"but '{model_path}' is being loaded.",
+                file=sys.stderr,
             )
         self.chunk_tokens = chunk_tokens
         self.chunk_overlap = chunk_overlap
@@ -81,7 +84,7 @@ class ProbeClassifier:
         # one that stops at the probe's layer, since layers above it never affect the result.
         self.extractor = extractor or FeatureExtractor(model_path=model_path, max_layer=self.layer_index)
         self.layer_index = self.extractor.resolve_layer(self.layer_index)
-        print(f"Using layer {self.layer_index} ({chunking}).")
+        print(f"Using layer {self.layer_index} ({chunking}).", file=sys.stderr)
 
     def chunk_spans(self, text: str) -> List[Tuple[int, int]]:
         """Returns (start, end) character spans: one per sentence, with long sentences windowed."""
@@ -173,6 +176,21 @@ def print_chunk_details(chunks: List[Chunk], threshold: float, indent: str = "")
         print(f"{indent}  {label} chars {c.start}-{c.end} ({c.prob * 100:6.2f}%): {snippet!r}")
 
 
+def result_json(chunks: List[Chunk], threshold: float, details: bool = False, **extra) -> str:
+    """One compact JSON object: {"pii": bool, "confidence": float}, plus spans with details=True."""
+    prob = max(c.prob for c in chunks)
+    out = dict(extra)
+    out.update(pii=bool(prob > threshold), confidence=round(float(prob), 4))
+    if details:
+        out["threshold"] = threshold
+        out["flagged"] = [
+            {"start": c.start, "end": c.end, "confidence": round(float(c.prob), 4), "text": c.text}
+            for c in chunks
+            if c.prob > threshold
+        ]
+    return json.dumps(out, ensure_ascii=False)
+
+
 def run_interactive(classifier: ProbeClassifier, threshold: float = 0.5):
     """Runs a persistent interactive REPL where the model stays loaded in memory."""
     print("\n" + "=" * 60)
@@ -208,8 +226,11 @@ def run_interactive(classifier: ProbeClassifier, threshold: float = 0.5):
             break
 
 
-def classify_document(classifier: ProbeClassifier, text: str, source: str, threshold: float):
+def classify_document(classifier: ProbeClassifier, text: str, source: str, threshold: float, pretty: bool, details: bool):
     chunks = classifier.predict_chunks(text)
+    if not pretty:
+        print(result_json(chunks, threshold, details))
+        return
     prob = max(c.prob for c in chunks)
     print("\n--- Inference Result ---")
     print(f"Input:       {source} ({len(text)} characters)")
@@ -218,13 +239,26 @@ def classify_document(classifier: ProbeClassifier, text: str, source: str, thres
     print_chunk_details(chunks, threshold)
 
 
+def emit_line(classifier: ProbeClassifier, line: str, n: int, args):
+    """Prints the result for one line of a file or stdin: a JSON object (with its line number) or the pretty row."""
+    chunks = classifier.predict_chunks(line)
+    if not args.pretty:
+        print(result_json(chunks, args.threshold, args.details, line=n))
+        return
+    prob = max(c.prob for c in chunks)
+    tag = "[PII]" if prob > args.threshold else "[CLEAN]"
+    print(f"{tag:7} ({prob * 100:6.2f}%) | {line}")
+
+
 def main():
     settings = load_settings()
     predict_cfg = settings["predict"]
+    sel = preparse_selection(settings)
 
     parser = argparse.ArgumentParser(
         description="Run inference on text using the trained linear probe (single-shot, file, or interactive mode)."
     )
+    add_selection_args(parser, settings)
     parser.add_argument(
         "text",
         nargs="?",
@@ -252,14 +286,14 @@ def main():
     parser.add_argument(
         "--weights",
         type=str,
-        default=settings["weights_path"],
-        help="Path to trained probe weights (default: settings.json weights_path)",
+        default=sel["weights_path"],
+        help="Path to trained probe weights, overriding --head (default: the selected head's weights_path)",
     )
     parser.add_argument(
         "--model-path",
         type=str,
-        default=settings["model_path"],
-        help="Path to base LLM (default: settings.json model_path)",
+        default=sel["model_path"],
+        help="Path to base LLM, overriding --model (default: the selected model's path)",
     )
     parser.add_argument(
         "--threshold",
@@ -279,12 +313,22 @@ def main():
         default=predict_cfg["chunk_overlap"],
         help="Tokens shared by neighboring windows inside a long sentence, so an identifier on a boundary lands whole in one window (default: settings.json predict.chunk_overlap)",
     )
+    parser.add_argument(
+        "--pretty",
+        action="store_true",
+        help="Human-readable output instead of JSON (interactive mode is always human-readable)",
+    )
+    parser.add_argument(
+        "--details",
+        action="store_true",
+        help="JSON output only: also include the threshold and the flagged spans with character offsets",
+    )
     args = parser.parse_args()
 
     classifier = ProbeClassifier(
         weights_path=args.weights,
         model_path=args.model_path,
-        fallback_layer=settings["layer"],
+        fallback_layer=sel["layer"],
         chunk_tokens=args.chunk_tokens,
         chunk_overlap=args.chunk_overlap,
         batch_size=settings["train"]["batch_size"],
@@ -294,32 +338,27 @@ def main():
     if args.file:
         file_path = Path(args.file)
         if not file_path.exists():
-            print(f"Error: File '{args.file}' not found.")
+            print(f"Error: File '{args.file}' not found.", file=sys.stderr)
             sys.exit(1)
         content = file_path.read_text(encoding="utf-8")
         if args.whole:
-            classify_document(classifier, content, f"'{args.file}'", args.threshold)
+            classify_document(classifier, content, f"'{args.file}'", args.threshold, args.pretty, args.details)
             return
         lines = [line.strip() for line in content.splitlines() if line.strip()]
-        print(f"Classifying {len(lines)} lines from '{args.file}':\n")
-        for line in lines:
-            prob, is_pii = classifier.predict(line, threshold=args.threshold)
-            tag = "[PII]" if is_pii else "[CLEAN]"
-            print(f"{tag:7} ({prob * 100:6.2f}%) | {line}")
+        if args.pretty:
+            print(f"Classifying {len(lines)} lines from '{args.file}':\n")
+        for n, line in enumerate(lines, start=1):
+            emit_line(classifier, line, n, args)
         return
 
     # 2. Piped stdin mode (e.g. echo "text" | python predict.py)
     if (args.text == "-" or args.text is None) and not sys.stdin.isatty():
         if args.whole:
-            classify_document(classifier, sys.stdin.read(), "stdin", args.threshold)
+            classify_document(classifier, sys.stdin.read(), "stdin", args.threshold, args.pretty, args.details)
             return
-        for line in sys.stdin:
-            line = line.strip()
-            if not line:
-                continue
-            prob, is_pii = classifier.predict(line, threshold=args.threshold)
-            tag = "[PII]" if is_pii else "[CLEAN]"
-            print(f"{tag:7} ({prob * 100:6.2f}%) | {line}")
+        lines = [line.strip() for line in sys.stdin if line.strip()]
+        for n, line in enumerate(lines, start=1):
+            emit_line(classifier, line, n, args)
         return
 
     # 3. Interactive REPL mode
@@ -329,6 +368,9 @@ def main():
 
     # 4. Single-shot CLI argument mode
     chunks = classifier.predict_chunks(args.text)
+    if not args.pretty:
+        print(result_json(chunks, args.threshold, args.details))
+        return
     prob = max(c.prob for c in chunks)
     print("\n--- Inference Result ---")
     print(f"Input:       '{args.text}'")

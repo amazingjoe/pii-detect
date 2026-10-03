@@ -595,6 +595,141 @@
       "text": "Tour guide Casimir Delacroix-Mbeki can be reached on WhatsApp at +33 6 45 12 78 90.",
       "label": 1,
       "category": "pii_medium"
+    },
+    {
+      "text": "Peter Smith is getting surgery on Friday the 13th.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Patient John Doe is currently admitted to Room 402.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The attending nurse confirmed that Susan Miller was discharged this morning.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Dr. Sarah Connor will perform the follow-up examination on Tuesday.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Please schedule a consultation for patient William Anderson at ten in the morning.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Billing record belongs to Michael Scott residing in Scranton, PA.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The legal summons was personally served to defendant Gregory House.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Forward the employment contract to mark.stevens@techventures.io today.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "If you have questions, email our lead investigator at hannah_abbott@consulting.com.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Call Bob Johnson at 555-0143 if the shipment does not arrive.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Contact Dr. Sarah Connor directly on her cell: 555-987-6543.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Customer support ticket opened by Emily Watson, phone 555-3211.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "You can reach contractor Marcus Brody at (415) 555-8921.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Please call detective James Gordon at 555-432-8765 as soon as possible.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Hey, this is Carlos, give me a call back on my cell at 312-555-0199.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The package was delivered to 742 Evergreen Terrace, Springfield for Homer Simpson.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Send the certified warranty deed to Richard Roe at 104 West Elm Street, Apt 3B, Austin, TX.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Homeowner address on file: Evelyn Reed, 5824 Oak Ridge Lane, Seattle, WA 98105.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The tenant living at 1204 Pine Valley Road, Columbus, OH is Samuel Jackson.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Deliver the prescription medication directly to Arthur Pendelton at 88 Beacon Street, Boston, MA.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Visa card ending in 4392 belonging to customer David Clark was billed four hundred dollars.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "My name is Samantha Green and you can reach me at samantha_g@yahoo.com or 555-7829.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "I moved to a new apartment at 450 Maple Avenue in Denver, let's hang out.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Hey team, this is Kevin Vance, my updated phone number is 206-555-7731.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Hi, I am registering for the conference; my full name is Patricia Bailey.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "The attending physician should review Dr. Charles Xavier's notes before discharge.",
+      "label": 1,
+      "category": "pii_medium"
+    },
+    {
+      "text": "Emergency contact for employee Lucas Scott is Nathan Scott at 910-555-0144.",
+      "label": 1,
+      "category": "pii_medium"
     }
   ]
 }

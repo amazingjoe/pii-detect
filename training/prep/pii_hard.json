@@ -82,7 +82,7 @@
       "category": "pii_hard"
     },
     {
-      "text": "export STRIPE_SECRET_KEY=sk_live_51HqT9dKj2mXa0bW8vN3pQ",
+      "text": "export STRIPE_SECRET_KEY=sk_live_51EXAMPLE00fakekey",
       "label": 1,
       "category": "pii_hard"
     },

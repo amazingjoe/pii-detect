@@ -15,7 +15,7 @@ from sklearn.model_selection import train_test_split
 from extract_features import FeatureExtractor
 from predict import ProbeClassifier
 from regressions import find_leaks, load_cases, print_report, run_regressions
-from settings import load_settings
+from settings import add_selection_args, load_settings, preparse_selection
 
 
 def load_dataset_from_json(file_path: Path, with_category: bool = False) -> List[Tuple]:
@@ -104,39 +104,41 @@ def move_file_to_done(source_file: Path, done_dir: Path) -> Path:
 def main():
     settings = load_settings()
     train_cfg = settings["train"]
+    sel = preparse_selection(settings)
 
     parser = argparse.ArgumentParser(
         description="Extract features using Qwen model and train a linear probe for PII detection."
     )
+    add_selection_args(parser, settings)
     parser.add_argument(
         "--prep-dir",
         type=str,
-        default=train_cfg["prep_dir"],
-        help="Directory containing JSON files ready to be trained on (default: settings.json train.prep_dir)",
+        default=sel["prep_dir"],
+        help="Directory containing JSON files ready to be trained on (default: the selected head's prep_dir)",
     )
     parser.add_argument(
         "--done-dir",
         type=str,
-        default=train_cfg["done_dir"],
-        help="Directory where processed JSON files are moved (default: settings.json train.done_dir)",
+        default=sel["done_dir"],
+        help="Directory where processed JSON files are moved (default: the selected head's done_dir)",
     )
     parser.add_argument(
         "--model-path",
         type=str,
-        default=settings["model_path"],
-        help="Path to the base model (default: settings.json model_path)",
+        default=sel["model_path"],
+        help="Path to the base model, overriding --model (default: the selected model's path)",
     )
     parser.add_argument(
         "--output-weights",
         type=str,
-        default=settings["weights_path"],
-        help="Destination path for trained probe weights (default: settings.json weights_path)",
+        default=sel["weights_path"],
+        help="Destination path for trained probe weights (default: the selected head's weights_path)",
     )
     parser.add_argument(
         "--layer",
         type=int,
-        default=settings["layer"],
-        help="Transformer layer index for feature extraction; saved into the weights file (default: settings.json layer)",
+        default=sel["layer"],
+        help="Transformer layer index for feature extraction; saved into the weights file (default: the selected model's layer)",
     )
     parser.add_argument(
         "--batch-size",
@@ -293,7 +295,7 @@ def main():
     print(f"\nProbe weights saved to '{args.output_weights}' (layer {layer}).")
 
     # 7. Regression cases: past failures, never trained on, scored the same way predict.py scores
-    cases_path = Path(settings["eval"]["regressions_path"])
+    cases_path = Path(sel["regressions_path"])
     if cases_path.exists():
         cases = load_cases(cases_path)
         classifier = ProbeClassifier(

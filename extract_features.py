@@ -1,10 +1,11 @@
+import sys
 import argparse
 from typing import List, Optional, Union
 import numpy as np
 import torch
 from transformers import AutoModel, AutoTokenizer
 
-from settings import load_settings
+from settings import add_selection_args, load_settings, preparse_selection
 
 
 class FeatureExtractor:
@@ -20,8 +21,8 @@ class FeatureExtractor:
                 the layer sweep).
         """
         self.device = device or ("mps" if torch.backends.mps.is_available() else "cpu")
-        print(f"Using compute device: {self.device}")
-        print(f"Loading tokenizer and model from '{model_path}'...")
+        print(f"Using compute device: {self.device}", file=sys.stderr)
+        print(f"Loading tokenizer and model from '{model_path}'...", file=sys.stderr)
 
         self.tokenizer = AutoTokenizer.from_pretrained(model_path)
         if self.tokenizer.pad_token is None:
@@ -52,7 +53,7 @@ class FeatureExtractor:
             # transformers replaces the top hidden state with the final-normed output. The full model's
             # hidden_states[layer] is un-normed for any layer below the top, so drop the norm to match it.
             self.model.norm = torch.nn.Identity()
-            print(f"Stopping forward passes at layer {layer} of {self.full_num_layers}.")
+            print(f"Stopping forward passes at layer {layer} of {self.full_num_layers}.", file=sys.stderr)
         self.max_layer = layer
 
     def extract(self, text: Union[str, List[str]], layer_index: int) -> np.ndarray:
@@ -117,10 +118,12 @@ class FeatureExtractor:
 
 if __name__ == "__main__":
     settings = load_settings()
+    sel = preparse_selection(settings)
 
     parser = argparse.ArgumentParser(
         description="Extract feature representations from text using an LLM hidden state."
     )
+    add_selection_args(parser, settings, head=False)
     parser.add_argument(
         "text",
         type=str,
@@ -129,14 +132,14 @@ if __name__ == "__main__":
     parser.add_argument(
         "--model-path",
         type=str,
-        default=settings["model_path"],
-        help="Path to the model directory (default: settings.json model_path)",
+        default=sel["model_path"],
+        help="Path to the model directory, overriding --model (default: the selected model's path)",
     )
     parser.add_argument(
         "--layer",
         type=int,
-        default=settings["layer"],
-        help="Hidden state layer index to extract (default: settings.json layer)",
+        default=sel["layer"],
+        help="Hidden state layer index to extract (default: the selected model's layer)",
     )
     args = parser.parse_args()
 

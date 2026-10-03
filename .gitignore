@@ -11,3 +11,14 @@ models/
 sweep_report*.html
 !sweep_report_template.html
 probes*/
+
+# Safety net: never commit model weights or secrets, wherever they end up
+*.safetensors
+*.gguf
+*.bin
+*.pt
+*.pth
+.env
+
+# Claude Code instructions (local only)
+CLAUDE.md

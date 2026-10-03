@@ -1,10 +1,22 @@
 {
-  "model_path": "./models/Qwen2.5-1.5B",
-  "layer": 12,
-  "weights_path": "probe_weights.npz",
+  "default_model": "qwen2.5-1.5b",
+  "models": {
+    "qwen2.5-1.5b": {
+      "hf_repo": "Qwen/Qwen2.5-1.5B",
+      "path": "./models/Qwen2.5-1.5B",
+      "layer": 12
+    }
+  },
+  "default_head": "pii",
+  "heads": {
+    "pii": {
+      "weights_path": "probe_weights.npz",
+      "prep_dir": "./training/prep",
+      "done_dir": "./training/done",
+      "regressions_path": "./training/eval/regressions.json"
+    }
+  },
   "train": {
-    "prep_dir": "./training/prep",
-    "done_dir": "./training/done",
     "batch_size": 32,
     "test_size": 0.3,
     "random_state": 42,
@@ -14,9 +26,6 @@
     "threshold": 0.5,
     "chunk_tokens": 48,
     "chunk_overlap": 16
-  },
-  "eval": {
-    "regressions_path": "./training/eval/regressions.json"
   },
   "sweep": {
     "folds": 5,

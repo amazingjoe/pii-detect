@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Dict, Iterable, List, Optional
 
 from predict import ProbeClassifier
-from settings import load_settings
+from settings import add_selection_args, load_settings, preparse_selection
 
 
 def load_cases(path: Path) -> List[Dict]:
@@ -68,11 +68,13 @@ def print_report(results: List[Dict], threshold: float, leaks: Optional[List[Dic
 def main():
     settings = load_settings()
     predict_cfg = settings["predict"]
+    sel = preparse_selection(settings)
 
     parser = argparse.ArgumentParser(description="Score a trained probe against the regression cases.")
-    parser.add_argument("--weights", type=str, default=settings["weights_path"], help="(default: settings.json weights_path)")
-    parser.add_argument("--cases", type=str, default=settings["eval"]["regressions_path"], help="(default: settings.json eval.regressions_path)")
-    parser.add_argument("--model-path", type=str, default=settings["model_path"], help="(default: settings.json model_path)")
+    add_selection_args(parser, settings)
+    parser.add_argument("--weights", type=str, default=sel["weights_path"], help="(default: the selected head's weights_path)")
+    parser.add_argument("--cases", type=str, default=sel["regressions_path"], help="(default: the selected head's regressions_path)")
+    parser.add_argument("--model-path", type=str, default=sel["model_path"], help="(default: the selected model's path)")
     parser.add_argument("--threshold", type=float, default=predict_cfg["threshold"], help="(default: settings.json predict.threshold)")
     args = parser.parse_args()
 
@@ -85,7 +87,7 @@ def main():
     classifier = ProbeClassifier(
         weights_path=args.weights,
         model_path=args.model_path,
-        fallback_layer=settings["layer"],
+        fallback_layer=sel["layer"],
         chunk_tokens=predict_cfg["chunk_tokens"],
         chunk_overlap=predict_cfg["chunk_overlap"],
         batch_size=settings["train"]["batch_size"],

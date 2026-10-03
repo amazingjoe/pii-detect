@@ -1525,6 +1525,66 @@
       "text": "For outages, text OUTAGE to the utility's service number.",
       "label": 0,
       "category": "false_positives"
+    },
+    {
+      "text": "The enterprise architecture relies on microservices deployed in private subnets.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "All employees must complete mandatory cybersecurity training by the end of Q3.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Standard operating procedures dictate that system logs must be retained for 90 days.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Our platform provides high availability, fault tolerance, and load balancing across nodes.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The container cluster scales automatically based on incoming CPU utilization.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The software license agreement governs the terms of system usage.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Continuous integration pipelines run automated unit tests on every pull request.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Database replication lag has been reduced below ten milliseconds.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Cardiovascular exercise significantly reduces the risk of chronic heart disease.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "The attending physician should review standard medical protocol before discharge.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Clinical trials demonstrated high efficacy for the new vaccine formulation.",
+      "label": 0,
+      "category": "false_positives"
+    },
+    {
+      "text": "Antibiotics are ineffective against viral infections such as the common cold.",
+      "label": 0,
+      "category": "false_positives"
     }
   ]
 }
