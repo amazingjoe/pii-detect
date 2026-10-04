@@ -1,4 +1,8 @@
-# LLM Feature Extraction & Linear Probe Training
+<p align="center">
+  <img src="assets/hero-banner.jpg" alt="PII Detect — LLM Feature Extraction & Linear Probe Training" width="100%" />
+</p>
+
+# PII Detect: LLM Feature Extraction & Linear Probe Training
 
 A lightweight pipeline that detects PII by reading the internal hidden states of a local **Qwen2.5-1.5B** model and scoring them with a linear probe. There's no fine-tuning and no text generation: inference is a partial forward pass plus a dot product and a sigmoid.
 
